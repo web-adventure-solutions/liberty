@@ -80,6 +80,7 @@
             </div>
         </div>
     </div>
+    <div id="stripe"></div>
 </header>
 <section class="our-team">
     <div class="container-fluid">
@@ -96,5 +97,13 @@
 <footer></footer>
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#stripe").animate({'right' : '120px'}, 3000)
+//        $(".jumbotron > .parallelogram .parallelogram-inner-text");
+//        $(".jumbotron > .parallelogram").hide().show("slide", { direction: "left" }, 1500);
+        $('.parallelogram').animate({'opacity':'1'}, 5000);
+    })
+</script>
 </body>
 </html>

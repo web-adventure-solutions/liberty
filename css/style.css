@@ -1,3 +1,14 @@
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus,
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus,
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus,
+.jumbotron-footer > div > div:first-child {
+    color: #66FAF9;
+}
+
+.parallelogram, #stripe {
+    background: #66FAF9;
+}
+
 @font-face { font-family: 'GothamPro-Black';
     src: local('GothamPro-Black'),
     url("../assets/fonts/GothaProBla.otf"),
@@ -71,19 +82,10 @@ nav .container-fluid {
     letter-spacing: 1px;
 }
 
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus,
-.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus,
-.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus,
-.jumbotron-footer > div > div:first-child {
-    color: #66FAF9;
-}
-
-.parallelogram {
-    background: #66FAF9;
-}
-
 .header-menu {
+    position: relative;
     margin-right: 25px;
+    z-index: 10;
 }
 
 /**header dropdown*/
@@ -119,6 +121,11 @@ li {
 }
 
 /*social header*/
+
+.social-header {
+    z-index: 10;
+    position: relative;
+}
 
 .base-default {
     padding: 20px;
@@ -167,6 +174,7 @@ header .jumbotron {
     -webkit-transform: skew(-20deg);
     -moz-transform: skew(-20deg);
     -o-transform: skew(-20deg);
+    opacity: 0;
 }
 
 header .jumbotron h2 .parallelogram .parallelogram-inner-text {
@@ -213,6 +221,24 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
 }
 
 /*end - jumbotron*/
+
+/*foreground-stripe*/
+#stripe {
+    position: absolute;
+    top: 0;
+    opacity: 0.3;
+    /*left: -300px;*/
+    right: 1000px;
+    display: block;
+    height: 100%;
+    width: 200px;
+    -webkit-transform: skew(-20deg);
+    -moz-transform: skew(-20deg);
+    -o-transform: skew(-20deg);
+    z-index: 1;
+}
+
+/*end-foreground-stripe*/
 
 /**end - header*/
 
