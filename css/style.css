@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'GothamPro';
-    src: local('GothamPro'),
+    src: local('GothamPro:300, 400, 500, 600, 700, 800, 900'),
         url("../assets/fonts/GothaProReg.otf") format("otf"),
         url('https://nomail.com.ua/files/woff/aafeb23794c0546aa78e6d11e49ef908.woff') format('woff');
 }
@@ -122,3 +122,39 @@ li[class="base-default"] a {
 /**end - social header*/
 
 /**end - header*/
+
+/**TEAM**/
+.our-team h4{
+    text-align: center;
+    color: #4f504f;
+    margin-top: 200px;
+    font-family: 'GothamPro', sans-serif;
+    font-size: 17px;
+    text-transform: uppercase;
+    position: absolute;
+}
+.our-team h1{
+    height: 85px;
+    text-align: center;
+    font-family: 'GothamPro', sans-serif;
+    color: #4f504f;
+    margin-top: 40px;
+    font-size: 130pt;
+    font-weight: 900;
+    opacity: 0.1;
+    text-transform: uppercase;
+    position: absolute;
+
+}
+
+.our-team h3{
+    text-align: center;
+    font-family: 'GothamPro', sans-serif;
+    color: #4f504f;
+    margin-top: 90px;
+    letter-spacing: 1px;
+    font-size: 17px;
+    position: absolute;
+
+}
+/**END TEAM**/
