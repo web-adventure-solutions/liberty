@@ -16,8 +16,11 @@
     "tests"
   ],
   "devDependencies": {
+  },
+  "dependencies": {
     "bootstrap": "^3.3.7",
     "font-awesome": "^4.7.0",
-    "simple-line-icons": "^2.4.1"
+    "simple-line-icons": "^2.4.1",
+    "jquery-ui": "^1.12.1"
   }
 }

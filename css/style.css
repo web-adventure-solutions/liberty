@@ -174,7 +174,7 @@ header .jumbotron {
     -webkit-transform: skew(-20deg);
     -moz-transform: skew(-20deg);
     -o-transform: skew(-20deg);
-    opacity: 0;
+    /*opacity: 0;*/
 }
 
 header .jumbotron h2 .parallelogram .parallelogram-inner-text {
@@ -227,8 +227,6 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
     position: absolute;
     top: 0;
     opacity: 0.3;
-    /*left: -300px;*/
-    right: 1000px;
     display: block;
     height: 100%;
     width: 200px;
@@ -236,6 +234,14 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
     -moz-transform: skew(-20deg);
     -o-transform: skew(-20deg);
     z-index: 1;
+}
+
+.stripe-anim-start {
+    right: 110vw;
+}
+
+.stripe-anim-end {
+    right: 10vw;
 }
 
 /*end-foreground-stripe*/

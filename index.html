@@ -78,9 +78,10 @@
                     </div>
                 </div>
             </div>
+            <button id="btn-anim" class="btn">Animate</button>
         </div>
     </div>
-    <div id="stripe"></div>
+    <div id="stripe" class="stripe-anim-start"></div>
 </header>
 <section class="our-team">
     <div class="container-fluid">
@@ -96,13 +97,26 @@
 <section></section>
 <footer></footer>
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/jquery-ui/jquery-ui.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 <script>
     $(document).ready(function () {
-        $("#stripe").animate({'right' : '120px'}, 3000)
-//        $(".jumbotron > .parallelogram .parallelogram-inner-text");
-//        $(".jumbotron > .parallelogram").hide().show("slide", { direction: "left" }, 1500);
-        $('.parallelogram').animate({'opacity':'1'}, 5000);
+//        setInterval(function () {
+//                $("#stripe").animate({'right': '120px'}, 3000);
+                $("#stripe").removeClass('stripe-anim-start');
+                $("#stripe").addClass('stripe-anim-end', 3000);
+
+                $('#btn-anim').click(function () {
+                    $("#stripe").removeClass('stripe-anim-end', 1, function () {
+                        $(this).addClass('stripe-anim-start', 1, function () {
+                            $(this).addClass('stripe-anim-end', 3000);
+                        });
+                    });
+                })
+//                $('.parallelogram').animate({'opacity': '1'}, 5000);
+//            }, 9000
+//        )
+
     })
 </script>
 </body>
