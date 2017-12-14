@@ -2,7 +2,7 @@ $(document).ready(function () {
     // $("#stripe").removeClass('stripe-anim-start');
     // $("#stripe").addClass('stripe-anim-end', 3000);
 
-    $('header .jumbotron h2').css({'left' : '-60px'});
+    // $('header .jumbotron h2').css({'left' : '-60px'});
 
 
     $('#btn-anim-start').click(function () {
