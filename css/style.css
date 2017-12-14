@@ -213,6 +213,7 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
 
 .jumbotron-footer {
     margin-left: -20px;
+    position: relative;
 }
 
 .jumbotron-footer .parallelogram {
