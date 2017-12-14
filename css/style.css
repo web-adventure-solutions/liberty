@@ -31,7 +31,15 @@
     font-family: 'GothamPro-Light';
     src: local('GothamPro-Light'),
     url("../assets/fonts/GothaProLig.otf") format("otf"),
-    url('https://nomail.com.ua/files/woff/aab7d221c447103e2454922cae29a3d7.woff') format('woff'); }
+    url('https://nomail.com.ua/files/woff/aab7d221c447103e2454922cae29a3d7.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'GothamPro-Bold';
+    src: local('GothamPro-Bold'),
+        url("../assets/fonts/GothaProBol.otf") format("otf"),
+        url('https://nomail.com.ua/files/woff/3f9c5a2b33fd28799ac8e55c093a4531.woff') format('woff');
+    }
 
 body {
     padding: 0;
@@ -252,34 +260,53 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
 .our-team h4{
     text-align: center;
     color: #4f504f;
-    margin-top: 200px;
+    margin-top: 5%;
     font-family: 'GothamPro', sans-serif;
     font-size: 17px;
     text-transform: uppercase;
     position: absolute;
+    left: 0%;
+    right: 0%;
 }
 .our-team h1{
     height: 85px;
     text-align: center;
-    font-family: 'GothamPro', sans-serif;
+    font-family: 'GothamPro-Bold', sans-serif;
     color: #4f504f;
     margin-top: 40px;
-    font-size: 130pt;
-    font-weight: 900;
+    font-size: 8vw;
+    font-weight: bolder;
     opacity: 0.1;
     text-transform: uppercase;
     position: absolute;
+    left: 0%;
+    right: 0%;
 
 }
 
 .our-team h3{
     text-align: center;
-    font-family: 'GothamPro', sans-serif;
+    font-family: 'GothamPro-Bold', sans-serif;
     color: #4f504f;
-    margin-top: 90px;
+    margin-top: 7%;
     letter-spacing: 1px;
-    font-size: 17px;
+    font-size: 25pt;
     position: absolute;
+    left: 0%;
+    right: 0%;
+}
 
+.about-team {
+    margin-top: 90%;
+
+    left: 0%;
+    right: 0%;
+    display: block;
+    -webkit-border-radius: 37px;
+    -moz-border-radius: 37px;
+    border-radius: 200px;
+    /*padding: 30px 30px 30px 30px;*/
+    border: solid #66FAF9 10px;
+    /* text-decoration: none; */
 }
 /**END TEAM**/
