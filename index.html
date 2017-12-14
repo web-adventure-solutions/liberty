@@ -117,6 +117,10 @@
 <script src="bower_components/jquery-ui/jquery-ui.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 <script>
+    $(document).on('DOMContentLoaded', function () {
+        $('header .parallelogram').css({'opacity' : '0'});
+    });
+
     $(document).ready(function () {
                 $("#stripe").removeClass('stripe-anim-start');
                 $("#stripe").addClass('stripe-anim-end', 3000);
