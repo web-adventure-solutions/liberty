@@ -56,29 +56,30 @@
     </nav>
     <div class="container">
         <div class="jumbotron">
-            <h2><div class="parallelogram"><div class="parallelogram-inner-text">Привіт у</div></div> Ліберті!</h2>
+            <h2><div class="parallelogram opacity-0"><div class="parallelogram-inner-text">Привіт у</div></div> Ліберті!</h2>
             <p>Розкажіть нам свою історію і ми зробимо <br> так, щоб ви її запам'ятали на довго!</p>
             <div class="jumbotron-footer">
-                <div class="jumbotron-footer-list-item">
+                <div class="jumbotron-footer-list-item opacity-0">
                     <div class="jumbotron-footer-list-item-num">1</div>
                     <div class="parallelogram">
                         <div class="parallelogram-inner-text">унікальність</div>
                     </div>
                 </div>
-                <div class="jumbotron-footer-list-item">
+                <div class="jumbotron-footer-list-item opacity-0">
                     <div class="jumbotron-footer-list-item-num">2</div>
                     <div class="parallelogram">
                         <div class="parallelogram-inner-text">концепція для вас</div>
                     </div>
                 </div>
-                <div class="jumbotron-footer-list-item">
+                <div class="jumbotron-footer-list-item opacity-0">
                     <div class="jumbotron-footer-list-item-num">3</div>
                     <div class="parallelogram">
                         <div class="parallelogram-inner-text">підтримка та партнерство</div>
                     </div>
                 </div>
             </div>
-            <button id="btn-anim" class="btn">Animate</button>
+            <button id="btn-anim-start" class="btn">Animate</button>
+            <button id="btn-anim-reset" class="btn">Reset</button>
         </div>
     </div>
     <div id="stripe" class="stripe-anim-start"></div>
@@ -188,20 +189,32 @@
 <script src="bower_components/jquery-ui/jquery-ui.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 <script>
-    $(document).on('DOMContentLoaded', function () {
-        $('header .parallelogram').css({'opacity' : '0'});
-    });
     $(document).ready(function () {
-                $("#stripe").removeClass('stripe-anim-start');
-                $("#stripe").addClass('stripe-anim-end', 3000);
+//                $("#stripe").removeClass('stripe-anim-start');
+//                $("#stripe").addClass('stripe-anim-end', 3000);
+        $('header .parallelogram').css({'left' : '-60px'});
 
-                $('#btn-anim').click(function () {
-                    $("#stripe").removeClass('stripe-anim-end', 1, function () {
-                        $(this).addClass('stripe-anim-start', 1, function () {
-                            $(this).addClass('stripe-anim-end', 3000);
-                        });
-                    });
-                })
+
+        $('#btn-anim-start').click(function () {
+            $('header .parallelogram').css({'opacity' : '0'}, 1);
+            $('header .parallelogram')
+                .animate({'left' : '0'}, {duration: 1000, queue: false})
+                .animate({'opacity': '1'}, {duration: 1000, queue: false});
+            $("#stripe").removeClass('stripe-anim-end', 1, function () {
+                $(this).addClass('stripe-anim-start', 1, function () {
+                    $(this).addClass('stripe-anim-end', 3000, 'easeOutQuint');
+                });
+            });
+
+        });
+        $('#btn-anim-reset').click(function () {
+            $('header .parallelogram').css({'left' : '-62px'});
+            $('header .parallelogram').css({'opacity' : '0'}, 1);
+            $("#stripe").removeClass('stripe-anim-end', 1, function () {
+                $(this).addClass('stripe-anim-start', 1);
+            });
+
+        });
     })
 </script>
 </body>

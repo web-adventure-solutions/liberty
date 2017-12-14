@@ -41,6 +41,14 @@
         url('https://nomail.com.ua/files/woff/3f9c5a2b33fd28799ac8e55c093a4531.woff') format('woff');
     }
 
+/*animations*/
+
+.opacity-0 {
+    opacity: 0;
+}
+
+/*end-animations*/
+
 body {
     padding: 0;
     margin: 0 auto;
@@ -174,6 +182,14 @@ header .jumbotron {
     background-color: transparent;
     color: #fff;
     font-family: 'GothamPro-Light', sans-serif;
+}
+
+header .jumbotron h2 {
+    position: relative;
+}
+
+header .parallelogram {
+    position: inherit;
 }
 
 .parallelogram {
