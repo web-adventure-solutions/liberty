@@ -185,37 +185,9 @@
         </div>
     </div>
 </footer>
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/jquery-ui/jquery-ui.js"></script>
-<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-<script>
-    $(document).ready(function () {
-//                $("#stripe").removeClass('stripe-anim-start');
-//                $("#stripe").addClass('stripe-anim-end', 3000);
-        $('header .parallelogram').css({'left' : '-60px'});
-
-
-        $('#btn-anim-start').click(function () {
-            $('header .parallelogram').css({'opacity' : '0'}, 1);
-            $('header .parallelogram')
-                .animate({'left' : '0'}, {duration: 1000, queue: false})
-                .animate({'opacity': '1'}, {duration: 1000, queue: false});
-            $("#stripe").removeClass('stripe-anim-end', 1, function () {
-                $(this).addClass('stripe-anim-start', 1, function () {
-                    $(this).addClass('stripe-anim-end', 3000, 'easeOutQuint');
-                });
-            });
-
-        });
-        $('#btn-anim-reset').click(function () {
-            $('header .parallelogram').css({'left' : '-62px'});
-            $('header .parallelogram').css({'opacity' : '0'}, 1);
-            $("#stripe").removeClass('stripe-anim-end', 1, function () {
-                $(this).addClass('stripe-anim-start', 1);
-            });
-
-        });
-    })
-</script>
+<script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
+<script src="bower_components/jquery-ui/jquery-ui.js" type="text/javascript"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js" type="text/javascript"></script>
+<script src="js/anims.js" type="text/javascript"></script>
 </body>
 </html>
