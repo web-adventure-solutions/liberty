@@ -44,7 +44,7 @@ header {
     background: url("../assets/img/banner_bg.jpg") no-repeat top center;
     height: 100vh;
     -webkit-background-size: 100%;
-    background-size: 100%;
+    background-size: cover;
 }
 
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
@@ -241,7 +241,7 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
 }
 
 .stripe-anim-end {
-    right: 10vw;
+    right: 18.6vh;;
 }
 
 /*end-foreground-stripe*/
