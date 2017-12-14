@@ -182,7 +182,6 @@ header .jumbotron {
     -webkit-transform: skew(-20deg);
     -moz-transform: skew(-20deg);
     -o-transform: skew(-20deg);
-    /*opacity: 0;*/
 }
 
 header .jumbotron h2 .parallelogram .parallelogram-inner-text {
