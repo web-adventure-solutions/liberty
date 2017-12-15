@@ -47,6 +47,14 @@
     opacity: 0;
 }
 
+header .jumbotron h2.anim {
+    left : -60px;
+}
+
+header .jumbotron-footer-list-item.anim {
+    right: -60px;
+}
+
 /*end-animations*/
 
 body {
