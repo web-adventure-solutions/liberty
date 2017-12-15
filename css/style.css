@@ -224,6 +224,7 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
 
 .jumbotron-footer .jumbotron-footer-list-item  {
     display: inline-flex;
+    position: relative;
 }
 
 .jumbotron-footer .parallelogram .parallelogram-inner-text {
