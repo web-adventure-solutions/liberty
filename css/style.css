@@ -349,7 +349,7 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
 .about-team {
     margin-top: 80%;
     height: 50%;
-    width: 50%;
+    width: 50%;/**/
     margin-right: 10px;
     position: relative;
     display: inline-block;
