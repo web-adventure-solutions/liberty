@@ -282,23 +282,26 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
 /**end - header*/
 
 /**TEAM**/
-.our-team h4{
+.our-team-title{
+    position: relative;
+    top: 10px;
+}
+.our-team-title h4{
     text-align: center;
     color: #4f504f;
-    margin-top: 5%;
+    margin-top: 15vh;
     font-family: 'GothamPro', sans-serif;
-    font-size: 17px;
-    text-transform: uppercase;
+    font-size: 2vw;
     position: absolute;
     left: 0%;
     right: 0%;
 }
-.our-team h1{
+.our-team-title h1{
     height: 85px;
     text-align: center;
     font-family: 'GothamPro-Bold', sans-serif;
     color: #4f504f;
-    margin-top: 40px;
+    margin-top: 12vh;
     font-size: 8vw;
     font-weight: bolder;
     opacity: 0.1;
@@ -309,28 +312,46 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
 
 }
 
-.our-team h3{
+.our-team-title h3{
     text-align: center;
     font-family: 'GothamPro-Bold', sans-serif;
     color: #4f504f;
-    margin-top: 7%;
-    letter-spacing: 1px;
-    font-size: 25pt;
+    margin-top: 20vh;
+    letter-spacing: 1vw;
+    font-size: 2vw;
     position: absolute;
     left: 0%;
     right: 0%;
+    text-transform: uppercase;
 }
 .about-team-width {
-    width: 125vh;
-    margin-left: 281px;
     text-align: center;
 }
+.about-team-width h3{
+    color: #66FAF9;
+    font-family: 'GothamPro', sans-serif;
+    font-size: 47px;
+    font-weight: bold;
+    margin-top: 12%;
+}
+.about-team-width h4{
+    /*margin-top: 9%;*/
+    font-family: 'GothamPro', sans-serif;
+    font-size: 21px;
+    opacity: 0.4;
+}
+.about-team-width p{
+    /*margin-top: -17%;
+    height: 160px;*/
+    font-family: 'GothamPro', sans-serif;
+    font-size: 20px;
+}
 .about-team {
-    margin-top: 90%;
-    height: 200px;
-    width: 200px;
+    margin-top: 80%;
+    height: 50%;
+    width: 50%;
     margin-right: 10px;
-
+    position: relative;
     display: inline-block;
     -webkit-border-radius: 37px;
     -moz-border-radius: 37px;
@@ -339,4 +360,80 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
     border: solid #66FAF9 10px;
     /* text-decoration: none; */
 }
+
+.our-team-title-two{
+    position: relative;
+    top: 10px;
+}
+.our-team-title-two h4{
+    text-align: center;
+    color: #4f504f;
+    margin-top: 15vh;
+    font-family: 'GothamPro', sans-serif;
+    font-size: 2vw;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+}
+.our-team-title-two h1{
+    height: 85px;
+    text-align: center;
+    font-family: 'GothamPro-Bold', sans-serif;
+    color: #4f504f;
+    margin-top: 12vh;
+    font-size: 8vw;
+    font-weight: bolder;
+    opacity: 0.1;
+    text-transform: uppercase;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+
+}
+
+.our-team-title-two h3{
+    text-align: center;
+    font-family: 'GothamPro-Bold', sans-serif;
+    color: #4f504f;
+    margin-top: 20vh;
+    letter-spacing: 1vw;
+    font-size: 2vw;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    text-transform: uppercase;
+}
+.about-team-we-work {
+    margin-top: 80%;
+    height: 100%;
+    width: 100%;
+    margin-right: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+.about-team-we-work2{
+    display: inline-block;
+}
+
+.about-team-we-work2 h3{
+    color: #66FAF9;
+    font-family: 'GothamPro', sans-serif;
+    font-size: 47px;
+    font-weight: bold;
+    margin-top: 12%;
+}
+.about-team-we-work2 h4{
+    margin-top: 9%;
+    font-family: 'GothamPro', sans-serif;
+    font-size: 21px;
+    opacity: 0.4;
+}
+.about-team-we-work2 p{
+    margin-top: -17%;
+    height: 160px;
+    font-family: 'GothamPro', sans-serif;
+    font-size: 20px;
+}
 /**END TEAM**/
+.row-eq-height { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }
