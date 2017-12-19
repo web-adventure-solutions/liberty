@@ -23,15 +23,15 @@
                 </button>
                 <a class="navbar-brand" href="#">
                     <img class="hidden-xs" src="assets/img/brand_img.png"/>
-                    <img class="visible-xs" src="assets/img/brand_img_sm.png"/></a>
+                    <img class="visible-xs" src="assets/img/brand_img_xs.png"/></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav header-menu">
-                    <li><a href="#">Про нас</a></li>
-                    <li><a href="#">Портфоліо</a></li>
-                    <li><a href="#">Контакти</a></li>
+                    <li><a href="#">Про нас <i class="fa fa-angle-down"></i></a></li>
+                    <li><a href="#">Портфоліо <i class="fa fa-angle-down"></i></a></li>
+                    <li><a href="#">Контакти <i class="fa fa-angle-down"></i></a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <i class="fa fa-angle-down"></i></a>
                         <ul class="dropdown-menu">
@@ -45,7 +45,7 @@
                         </ul>
                     </li>
                 </ul>
-                <ul class="nav navbar-nav social-header hidden-sm">
+                <ul class="nav navbar-nav social-header hidden-sm hidden-xs">
                     <li><a href="#"><i class="base-default base-vimeo"></i></a></li>
                     <li><a href="#"><i class="base-default base-facebook"></i></a></li>
                     <li><a href="#"><i class="base-default base-youtube"></i></a></li>
@@ -56,29 +56,33 @@
     </nav>
     <div class="container">
         <div class="jumbotron">
-            <h2 class="opacity-0 anim"><div class="parallelogram"><div class="parallelogram-inner-text">Привіт у</div></div> Ліберті!</h2>
-            <p class="opacity-0">Розкажіть нам свою історію і ми зробимо <br> так, щоб ви її запам'ятали на довго!</p>
-            <div class="jumbotron-footer row">
+            <h2 class="opacity-0 anim"><div class="parallelogram"><div class="parallelogram-inner-text">Привіт у</div></div><div class="parallelogram"><div class="parallelogram-inner-text"> Ліберті!</div></div> </h2>
+            <p class="opacity-0">Розкажіть нам свою <br class="visible-xs">історію і ми зробимо <br class="visible-xs"> так, щоб ви її<br class="visible-xs"> запам'ятали на довго!</p>
+            <div class="jumbotron-footer">
                 <div class="col-xs-12 jumbotron-footer-list-item anim opacity-0">
-                    <div class="jumbotron-footer-list-item-num">1</div>
-                    <div class="parallelogram">
+                    <div class="col-xs-4 jumbotron-footer-list-item-num">1</div>
+                    <div class="col-xs-8 parallelogram">
                         <div class="parallelogram-inner-text">унікальність</div>
                     </div>
                 </div>
                 <div class="col-xs-12 jumbotron-footer-list-item anim opacity-0">
-                    <div class="jumbotron-footer-list-item-num">2</div>
-                    <div class="parallelogram">
+                    <div class="col-xs-4 jumbotron-footer-list-item-num">2</div>
+                    <div class="col-xs-8 parallelogram">
                         <div class="parallelogram-inner-text">концепція для вас</div>
                     </div>
                 </div>
                 <div class="col-xs-12 jumbotron-footer-list-item anim opacity-0">
-                    <div class="jumbotron-footer-list-item-num">3</div>
-                    <div class="parallelogram">
-                        <div class="parallelogram-inner-text">підтримка та партнерство</div>
+                    <div class="col-xs-4 jumbotron-footer-list-item-num">3</div>
+                    <div class="col-xs-8 parallelogram">
+                        <div class="parallelogram-inner-text">підтримка та<br class="visible-xs"> партнерство</div>
                     </div>
                 </div>
             </div>
-            <button id="btn-anim-start" class="btn" style="position: fixed; bottom: 25px; background-color: #0b93d5">Animate</button>
+            <div id="viewportInf" class="btn-info" style="position: absolute; top: 0; left: 30%; right: 30%; opacity: 0.7; background-color: transparent;">
+                <p style="font-size: 12px;">width : </p>
+                <p style="font-size: 12px;">height : </p>
+            </div>
+            <button id="btn-anim-start" class="btn" style="position: fixed; left: 25px; bottom: 25px; background-color: #0b93d5">Animate</button>
             <button id="btn-anim-reset" class="btn" style="position: fixed; bottom: 25px; left: 260px; background-color: #0b93d5">Reset</button>
         </div>
     </div>
@@ -252,6 +256,18 @@
 </footer>
 <script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
 <script src="bower_components/jquery-ui/jquery-ui.js" type="text/javascript"></script>
+<!--for debug purpose-->
+<script>
+    $(document).ready(function () {
+        $('#viewportInf p:first-child').append(function () {
+            return $(window).width();
+        })
+        $('#viewportInf p:last-child').append(function () {
+            return $(window).height();
+        })
+    });
+</script>
+<!--//for debug purpose-->
 <script src="bower_components/bootstrap/dist/js/bootstrap.js" type="text/javascript"></script>
 <script src="js/anims.js" type="text/javascript"></script>
 </body>

@@ -55,6 +55,15 @@ header .jumbotron-footer-list-item.anim {
     right: -60px;
 }
 
+@media (max-width: 767px) {
+    header .jumbotron-footer-list-item.anim {
+        right: 60px;
+    }
+    header .jumbotron {
+        margin-top: -60px;
+    }
+}
+
 /*end-animations*/
 
 body {
@@ -86,9 +95,9 @@ header {
     height: 80px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .navbar-brand img {
-        height: 50px;
+        height: 100px;
     }
     header .container-fluid {
         margin-left: -20px;
@@ -106,6 +115,10 @@ nav .container-fluid {
     padding: 0 25px 0 3em;
 }
 
+.navbar-default {
+    z-index: 100;
+}
+
 .navbar-default .navbar-nav > li > a {
     padding: 40px 5px;
 }
@@ -121,8 +134,69 @@ nav .container-fluid {
 .header-menu {
     position: relative;
     margin-right: 25px;
-    z-index: 10;
 }
+
+/**header menu mobile*/
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+     background-color: transparent;
+}
+
+.navbar-default .navbar-toggle {
+    border: none;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+@media (max-width: 767px) {
+    .stripe-anim-start {
+        right: 180vw !important;
+    }
+    #stripe {
+        width: 120px !important;
+        -webkit-transform: skew(-40deg) !important;
+        -moz-transform: skew(-40deg) !important;
+        -o-transform: skew(-40deg) !important;
+        opacity: 0.8 !important;
+    }
+    .stripe-anim-end {
+        right: 43vh !important;
+    }
+    .header-menu {
+        background-color: #1f4443b3;
+        margin-left: 44%;
+        margin-right: -10px;
+    }
+    .header-menu > li {
+        margin: 0 10% !important;
+        /*float: right;*/
+        border-bottom: 1px solid #fff;
+        width: 80%;
+    }
+    .header-menu > li:last-child {
+        border-bottom: none;
+    }
+    .header-menu .fa-angle-down {
+        font-size: 3vh;
+    }
+    .navbar-default .navbar-nav > li > a {
+        padding: 10px 15px;
+        font-size: 10pt;
+        text-align: right;
+    }
+    .navbar-default .navbar-collapse {
+        border-color: transparent;
+    }
+    .navbar-default {
+        border-bottom-color: transparent;
+    }
+    .jumbotron-footer {
+        display: inline-grid;
+    }
+}
+
+/**end - header menu mobile*/
 
 /**header dropdown*/
 
@@ -134,7 +208,7 @@ header .navbar-toggle {
     background-color: transparent;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 767px) {
     header .navbar-nav > li > .dropdown-menu {
         right: auto;
         margin-top: 1em;
@@ -206,6 +280,56 @@ header .jumbotron {
     background-color: transparent;
     color: #fff;
     font-family: 'GothamPro-Light', sans-serif;
+    position: relative;
+    z-index: 2;
+}
+
+@media (max-width: 767px) {
+    header .jumbotron {
+        text-align: center;
+    }
+    header .jumbotron p {
+        font-size: 3vh;
+    }
+    header .jumbotron h2 {
+        font-size: 4vh;
+        line-height: 35px;
+    }
+    header .jumbotron .parallelogram:first-child {
+        background: transparent;
+    }
+    header .jumbotron .parallelogram:first-child .parallelogram-inner-text {
+        color: #fff;
+    }
+    header .jumbotron .jumbotron-footer-list-item {
+        float: none;
+        padding: 0 15px;
+    }
+    .jumbotron-footer {
+        width: 100%;
+    }
+    .jumbotron-footer .jumbotron-footer-list-item-num {
+        color: #fff !important;
+        font-size: 26pt !important;
+    }
+    .jumbotron-footer .parallelogram {
+        width: 100% !important;
+        background-color: transparent;
+        border: 1px solid #66FAF9;
+    }
+}
+
+@media (min-width: 768px) {
+    header .jumbotron h2 .parallelogram:last-child {
+        background: transparent;
+    }
+    header .jumbotron .parallelogram:last-child .parallelogram-inner-text {
+        color: #fff;
+    }
+    .jumbotron-footer .jumbotron-footer-list-item [class*='col-xs'] {
+        width: auto;
+        float: none;
+    }
 }
 
 header .jumbotron h2 {
