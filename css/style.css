@@ -86,6 +86,18 @@ header {
     height: 80px;
 }
 
+@media (max-width: 768px) {
+    .navbar-brand img {
+        height: 50px;
+    }
+    header .container-fluid {
+        margin-left: -20px;
+    }
+    .navbar-toggle {
+        margin-top: 20px;
+    }
+}
+
 nav {
     height: 115px;
 }
@@ -113,6 +125,10 @@ nav .container-fluid {
 }
 
 /**header dropdown*/
+
+header .navbar-toggle {
+    z-index: 100;
+}
 
 .header-menu .dropdown-menu {
     background-color: transparent;
@@ -223,6 +239,19 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
     margin-left: -20px;
     position: relative;
 }
+
+@media (min-width: 1024px) {
+    .jumbotron-footer .col-xs-12 {
+        width: auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    .jumbotron-footer .col-xs-12 {
+        margin-top: 1em;
+    }
+}
+
 
 .jumbotron-footer .parallelogram {
     height: 40px;
