@@ -150,9 +150,6 @@ nav .container-fluid {
 }
 
 @media (max-width: 767px) {
-    .stripe-anim-start {
-        right: 180vw !important;
-    }
     #stripe {
         width: 120px !important;
         -webkit-transform: skew(-40deg) !important;
@@ -424,6 +421,12 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
 
 .stripe-anim-start {
     right: 130vw;
+}
+
+@media (max-width: 767px) {
+    .stripe-anim-start {
+        right: 180vw;
+    }
 }
 
 .stripe-anim-end {
