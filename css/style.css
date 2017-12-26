@@ -103,7 +103,7 @@ header {
         margin-left: -20px;
     }
     .navbar-toggle {
-        margin-top: 20px;
+        margin-top: 50px;
     }
 }
 
@@ -176,7 +176,7 @@ nav .container-fluid {
     }
     .header-menu .fa-angle-down {
         font-size: 3vh;
-    }
+    }   
     .navbar-default .navbar-nav > li > a {
         padding: 10px 15px;
         font-size: 10pt;
