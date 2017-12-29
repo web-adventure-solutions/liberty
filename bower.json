@@ -19,8 +19,9 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "font-awesome": "^4.7.0",
-    "simple-line-icons": "^2.4.1",
     "jquery-ui": "^1.12.1",
-    "animate.css": "^3.5.2"
+    "animate.css": "^3.5.2",
+    "QTransform": "https://github.com/puppybits/QTransform.git",
+    "jQuery-rwdImageMaps": "https://github.com/stowball/jQuery-rwdImageMaps.git"
   }
 }
