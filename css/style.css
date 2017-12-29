@@ -528,12 +528,13 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
 .our-team-title-two h4{
     text-align: center;
     color: #4f504f;
-    top: 2vh;
+    top: 50%;
     font-family: 'GothamPro', sans-serif;
     font-size: 2vw;
     position: absolute;
-    left: 0%;
+    left: 50%;
     right: 0%;
+    transform: translate(-50%, -137%);
 }
 .our-team-title-two h1{
     text-align: center;
@@ -552,13 +553,14 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
     text-align: center;
     font-family: 'GothamPro-Bold', sans-serif;
     color: #4f504f;
-    top: 6vh;
+    top: 53%;
     letter-spacing: 1vw;
     font-size: 2vw;
     position: absolute;
-    left: 0%;
+    left: 50%;
     right: 0%;
     text-transform: uppercase;
+    transform: translate(-50%, -45%);
 }
 .about-team-we-work {
     /*margin-top: 80%;*/
@@ -593,6 +595,136 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
     font-size: 16pt;
 }
 /**END TEAM**/
+/**PROMOTION**/
+
+.wedding{
+    position: relative;
+    top: 83px;
+
+}
+.wedding-title{
+     text-align: center;
+     font-family: 'Corinthia', sans-serif;
+     color: #66FAF9;
+     font-size: 7vw;
+     left: 0%;
+     right: 0%;
+ }
+.wedding-img{
+    text-align: center;
+    font-family: 'Corinthia', sans-serif;
+    font-size: 6vw;
+    left: 0%;
+    right: 0%;
+}
+
+.wedding-img-img{
+    height: 40%;
+    width: 40%;/**/
+    -webkit-border-radius: 37px;
+    -moz-border-radius: 37px;
+    border-radius: 50%;
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    position: relative;
+    display: inline-block;
+}
+
+.wedding-promotion h3{
+    text-align: center;
+    color: #4f504f;
+    font-family: 'GothamPro-Bold', sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.wedding-promotion p{
+    color: #4f504f;
+    font-family: 'GothamPro', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.wedding-promotion h4{
+    text-align: center;
+    font-family: 'GothamPro', sans-serif;
+    color: #66FAF9;
+    font-size: 19px;
+    text-transform: uppercase;
+}
+
+.price-promotion{
+    position: relative;
+    top: -100px;
+}
+.price-promotion h4{
+    text-align: center;
+    color: #4f504f;
+    top: 50%;
+    font-family: 'GothamPro', sans-serif;
+    font-size: 2vw;
+    position: absolute;
+    left: 50%;
+    right: 0%;
+    transform: translate(-50%, -137%);
+}
+.price-promotion h1{
+    text-align: center;
+    font-family: 'GothamPro-Bold', sans-serif;
+    color: #4f504f;
+    font-size: 8vw;
+    font-weight: bolder;
+    opacity: 0.1;
+    text-transform: uppercase;
+    left: 0%;
+    right: 0%;
+
+}
+
+
+
+.price-promotion h3{
+    text-align: center;
+    font-family: 'GothamPro-Bold', sans-serif;
+    color: #4f504f;
+    top: 53%;
+    letter-spacing: 1vw;
+    font-size: 2vw;
+    position: absolute;
+    left: 50%;
+    right: 0%;
+    text-transform: uppercase;
+    transform: translate(-50%, -45%);
+}
+
+.submit-order{
+    -webkit-border-radius: 28%;
+    -moz-border-radius: 28%;
+    border-radius: 28px;
+    font-family: 'GothamPro-Bold', sans-serif;
+    color: #fff;
+    font-size: 20px;
+    background: #66FAF9 !important;
+    padding: 10px 62px 10px 62px;
+    text-decoration: none;
+    border-color: transparent;
+    text-align: center;
+    position: relative;
+    left: 42px;
+}
+
+.btn:hover {
+    background: #4f504f !important;
+    color: #66FAF9;
+    text-decoration: none;
+    border-color: transparent;
+}
+/**END PROMOTION**/
+
+юdouble-text-input{
+    display: inline;
+  left: 50%;
+}
 .row-eq-height { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }
 
 /*intro screen styles*/
