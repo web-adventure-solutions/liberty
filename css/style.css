@@ -440,39 +440,35 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
 /**TEAM**/
 .our-team-title{
     position: relative;
-    top: 10px;
+    top: 20px;
 }
 .our-team-title h4{
     text-align: center;
     color: #4f504f;
-    margin-top: 15vh;
+    top: 2vh;
     font-family: 'GothamPro', sans-serif;
     font-size: 2vw;
     position: absolute;
     left: 0%;
     right: 0%;
 }
-.our-team-title h1{
-    height: 85px;
+.our-team-title h1 {
     text-align: center;
     font-family: 'GothamPro-Bold', sans-serif;
     color: #4f504f;
-    margin-top: 12vh;
     font-size: 8vw;
     font-weight: bolder;
     opacity: 0.1;
     text-transform: uppercase;
-    position: absolute;
     left: 0%;
     right: 0%;
-
 }
 
 .our-team-title h3{
     text-align: center;
     font-family: 'GothamPro-Bold', sans-serif;
     color: #4f504f;
-    margin-top: 20vh;
+    top: 6vh;
     letter-spacing: 1vw;
     font-size: 2vw;
     position: absolute;
@@ -481,14 +477,15 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
     text-transform: uppercase;
 }
 .about-team-width {
+    margin-top: 90px;
     text-align: center;
 }
 .about-team-width h3{
     color: #66FAF9;
     font-family: 'GothamPro', sans-serif;
-    font-size: 47px;
+    font-size: 31px;
     font-weight: bold;
-    margin-top: 12%;
+    /*margin-top: 12%;*/
 }
 .about-team-width h4{
     /*margin-top: 9%;*/
@@ -500,31 +497,38 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
     /*margin-top: -17%;
     height: 160px;*/
     font-family: 'GothamPro', sans-serif;
-    font-size: 20px;
+    font-size: 14px;
 }
-.about-team {
-    margin-top: 80%;
-    height: 50%;
-    width: 50%;/**/
-    margin-right: 10px;
+.about-team-img{
+    height: 40%;
+    width: 40%;/**/
+    -webkit-border-radius: 37px;
+    -moz-border-radius: 37px;
+    border: solid #66FAF9 10px;
+    border-radius: 200px;
+    position: relative;
+    display: inline-block;
+
+}
+.about-team{
     position: relative;
     display: inline-block;
     -webkit-border-radius: 37px;
     -moz-border-radius: 37px;
-    border-radius: 200px;
+
     /*padding: 30px 30px 30px 30px;*/
-    border: solid #66FAF9 10px;
+
     /* text-decoration: none; */
 }
 
 .our-team-title-two{
     position: relative;
-    top: 10px;
+    top: 20px;
 }
 .our-team-title-two h4{
     text-align: center;
     color: #4f504f;
-    margin-top: 15vh;
+    top: 2vh;
     font-family: 'GothamPro', sans-serif;
     font-size: 2vw;
     position: absolute;
@@ -532,16 +536,13 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
     right: 0%;
 }
 .our-team-title-two h1{
-    height: 85px;
     text-align: center;
     font-family: 'GothamPro-Bold', sans-serif;
     color: #4f504f;
-    margin-top: 12vh;
     font-size: 8vw;
     font-weight: bolder;
     opacity: 0.1;
     text-transform: uppercase;
-    position: absolute;
     left: 0%;
     right: 0%;
 
@@ -551,7 +552,7 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
     text-align: center;
     font-family: 'GothamPro-Bold', sans-serif;
     color: #4f504f;
-    margin-top: 20vh;
+    top: 6vh;
     letter-spacing: 1vw;
     font-size: 2vw;
     position: absolute;
@@ -560,7 +561,7 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
     text-transform: uppercase;
 }
 .about-team-we-work {
-    margin-top: 80%;
+    /*margin-top: 80%;*/
     height: 100%;
     width: 100%;
     margin-right: 10px;
@@ -569,27 +570,27 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
 }
 
 .about-team-we-work2{
+    position: relative;
+    top: 90px;
     display: inline-block;
 }
 
 .about-team-we-work2 h3{
     color: #66FAF9;
-    font-family: 'GothamPro', sans-serif;
-    font-size: 47px;
-    font-weight: bold;
-    margin-top: 12%;
+    font-family: 'GothamPro-Light', sans-serif;
+    font-size: 100pt;
+    /*margin-top: 12%;*/
+    text-transform: uppercase;
 }
 .about-team-we-work2 h4{
-    margin-top: 9%;
-    font-family: 'GothamPro', sans-serif;
-    font-size: 21px;
-    opacity: 0.4;
+    font-family: 'GothamPro-Bold', sans-serif;
+    font-size: 35pt;
+    text-transform: uppercase;
+    color: #54514F;
 }
 .about-team-we-work2 p{
-    margin-top: -17%;
-    height: 160px;
-    font-family: 'GothamPro', sans-serif;
-    font-size: 20px;
+    font-family: 'GothamPro-Light', sans-serif;
+    font-size: 16pt;
 }
 /**END TEAM**/
 .row-eq-height { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }
