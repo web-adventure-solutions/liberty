@@ -754,12 +754,13 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
 .feather-img-bg-top {
     -webkit-mask: url("../assets/img/feather_top.png") no-repeat;
     -webkit-mask-position-x: 140%;
-    -webkit-mask-position-y: -760%;
+    -webkit-mask-position-y: -620%;
     -webkit-mask-size: 49%;
 }
 .feather-img-bg-bottom {
     -webkit-mask: url("../assets/img/feather_bottom.png") no-repeat;
-    -webkit-mask-position: -79% 620%;
+    -webkit-mask-position-x: -79%;
+    -webkit-mask-position-y: 1000%;
     -webkit-mask-size: 50%;
 }
 
