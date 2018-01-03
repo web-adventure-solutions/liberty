@@ -84,6 +84,10 @@
             $('.feather-img-bg-bottom').animate({
                 'opacity': 1
             }, 500);
+        }).mouseenter(function () {
+            $('.feather-img-bg-bottom').animate({
+                'opacity': 0.3
+            }, 500);
         });
 
         container = $(window);
@@ -91,10 +95,6 @@
         container_h = container.height();
 
         $('#top-feather-area').mousemove(function (e) {
-
-            $('.feather-img-bg-bottom').animate({
-                'opacity': 0.3
-            }, 500);
 
             pos_x = e.pageX;
             pos_y = e.pageY;
