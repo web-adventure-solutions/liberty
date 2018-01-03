@@ -35,16 +35,23 @@
 <script type="text/javascript">
     $(document).ready(function () {
         $('img[usemap]').rwdImageMaps();
-        $('.feather-img-bg-top').animate({
-            '-webkit-mask-position-x': '50%',
-            '-webkit-mask-position-y': '50%',
-            'opacity' : '1'
-        }, 2000);
-        $('.feather-img-bg-bottom').animate({
-            '-webkit-mask-position-x': '50%',
-            '-webkit-mask-position-y': '50%',
-            'opacity' : '1'
-        }, 2000);
+
+        $(document).keyup(function (e) {
+            if (e.keyCode === 65) {
+                $('.feather-img-bg-top').animate({
+                    '-webkit-mask-position-x': '50%',
+                    '-webkit-mask-position-y': '50%',
+                    'opacity' : '1'
+                }, 2000);
+                $('.feather-img-bg-bottom').animate({
+                    '-webkit-mask-position-x': '50%',
+                    '-webkit-mask-position-y': '50%',
+                    'opacity' : '1'
+                }, 2000);
+            }
+        });
+
+
 
 
 
