@@ -25,7 +25,7 @@
 
 <map name="strokemap">
     <area id="top-feather-area" href="111" coords="5,4,152,19,356,99,583,229,771,407,964,669,1104,978,308,1788,181,1610,68,1299,12,961,3,604" shape="poly">
-    <area id="bottom-feather-area" href="222" coords="345,1824,1119,1041,1254,1517,1505,1838,1559,1601,1609,1151,1862,1405,2032,1623,2102,1796,2093,1965,1994,2075,1732,2128,1476,2132,1252,2112,735,2125,468,1970,362,1900" shape="poly">
+    <area id="bottom-feather-area" href="222" coords="311,1741,627,1993,781,2020,1525,2025,1820,2004,1947,1933,1997,1845,1998,1686,1870,1456,1692,1244,1547,1120,1059,982" shape="poly">
 </map>
 
 <script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
@@ -35,67 +35,21 @@
 <script type="text/javascript">
     $(document).ready(function () {
         $('img[usemap]').rwdImageMaps();
-
-        $(document).keyup(function (e) {
-            if (e.keyCode === 65) {
-                $('.feather-img-bg-top').animate({
-                    '-webkit-mask-position-x': '50%',
-                    '-webkit-mask-position-y': '50%',
-                    'opacity' : '1'
-                }, 2000);
-                $('.feather-img-bg-bottom').animate({
-                    '-webkit-mask-position-x': '50%',
-                    '-webkit-mask-position-y': '50%',
-                    'opacity' : '1'
-                }, 2000);
-            }
-        });
+        $('.feather-img-bg-top').animate({
+            '-webkit-mask-position-x': '50%',
+            '-webkit-mask-position-y': '50%',
+            'opacity' : '1'
+        }, 2000);
+        $('.feather-img-bg-bottom').animate({
+            '-webkit-mask-position-x': '50%',
+            '-webkit-mask-position-y': '50%',
+            'opacity' : '1'
+        }, 2000);
 
 
 
 
 
-
-//        var $layer = $('.feather-img-bg-top'),
-//            $container = $(window),
-//            container_w = $container.width(),
-//            container_h = $container.height();
-//
-//        console.log(container_h + ' x ' + container_w);
-//
-//        $(window).on('mouseover.parallax', function(event) {
-//            var pos_x = event.pageX,
-//                pos_y = event.pageY,
-//                left  = 0,
-//                top   = 0;
-//
-//            left = container_w / 2 - pos_x;
-//            top  = container_h / 2 - pos_y;
-//
-//            TweenMax.to(
-//                $layer,
-//                1,
-//                {
-//                    css: {
-////                        transform: 'translateX(-50%) translateY(-50%)',
-////                        '-webkit-mask-position-x':  (left / 12) * -1 + 'px',
-////                        '-webkit-mask-position-x':  '-50%',
-////                        '-webkit-mask-position-y': (top / 6) * -1 + 'px'
-////                        '-webkit-mask-position-y': '-50%'
-//                    },
-//                    ease:Expo.easeOut,
-//                    overwrite: 'all'
-//                });
-//        });
-        $('#top-feather-area').mouseout(function () {
-            $('.feather-img-bg-bottom').animate({
-                'opacity': 1
-            }, 500);
-        }).mouseenter(function () {
-            $('.feather-img-bg-bottom').animate({
-                'opacity': 0.3
-            }, 500);
-        });
 
         container = $(window);
         container_w = container.width();
@@ -109,38 +63,31 @@
             left_pos = container_w / 2 - pos_x;
             top_pos = container_h / 2 - pos_y;
 
-//            for (var prop in pos_obj) {
-//                pos_obj[prop] *= -0.222222222;
-//                pos_obj[prop] = pos_obj[prop].toString().slice(0, -1);
-//            }
-
-            console.log('l : ' + left_pos + '; t : ' + top_pos);
-
-//            $('.feather-img-bg-top').css({
-//                translateX: pos_obj.pos_x + '%',
-//                translateY: pos_obj.pos_y + '%',
-////            transform: translate(-78%, -60%) scale(0.8);
-////            -webkit-mask-position: 90% 50%;
-////                '-webkit-mask-size': '61%'
-//            });
-
-//            $('.feather-img-bg-top').css({translate : '-80%'});
-//
-//            $('.feather-img-bg-top').css({
-//                'translateX' : '-50%',
-//                'translateY' : '-50%'
-//            });
 
             $('.feather-img-bg-top').animate({
-//                translateX: pos_obj.pos_x / 30 + '%',
-//                translateY: pos_obj.pos_y  / 15 + '%',
                 translateX: -left_pos / 100 - 50 + '%',
                 translateY: -top_pos / 100 - 50 + '%',
                 '-webkit-mask-position-x': left_pos / 50 + 50 + '%',
                 '-webkit-mask-position-y': top_pos / 10 + 50 + '%'
-//                'opacity' : '0.1'
             }, {duration: 1})
         });
+
+        $('#bottom-feather-area').mousemove(function (e) {
+
+            pos_x = e.pageX;
+            pos_y = e.pageY;
+
+            left_pos = container_w / 2 - pos_x;
+            top_pos = container_h / 2 - pos_y;
+
+
+            $('.feather-img-bg-bottom').animate({
+                translateX: -left_pos / 100 - 50 + '%',
+                translateY: -top_pos / 100 - 50 + '%',
+                '-webkit-mask-position-x': left_pos / 50 + 50 + '%',
+                '-webkit-mask-position-y': top_pos / 10 + 50 + '%'
+            }, {duration: 1})
+        })
 
 
 
@@ -148,7 +95,5 @@
     })
 </script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.js" type="text/javascript"></script>
-<script src="js/anims.js" type="text/javascript"></script>
-
 </body>
 </html>
