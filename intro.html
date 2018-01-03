@@ -41,7 +41,7 @@
             'opacity' : '1'
         }, 2000);
         $('.feather-img-bg-bottom').animate({
-            '-webkit-mask-position-x': '51%',
+            '-webkit-mask-position-x': '50%',
             '-webkit-mask-position-y': '50%',
             'opacity' : '1'
         }, 2000);
@@ -80,27 +80,34 @@
 //                    overwrite: 'all'
 //                });
 //        });
-
+        $('#top-feather-area').mouseout(function () {
+            $('.feather-img-bg-bottom').animate({
+                'opacity': 1
+            }, 500);
+        });
 
         container = $(window);
         container_w = container.width();
         container_h = container.height();
 
         $('#top-feather-area').mousemove(function (e) {
-            var pos_obj = {
-                pos_x : e.pageX +60,
-                pos_y : e.pageY +50
-            };
 
-            left = container_w / 2 - pos_obj.pos_x;
-            top = container_h / 2 - pos_obj.pos_y;
+            $('.feather-img-bg-bottom').animate({
+                'opacity': 0.3
+            }, 500);
 
-            for (var prop in pos_obj) {
-                pos_obj[prop] *= -0.222222222;
-                pos_obj[prop] = pos_obj[prop].toString().slice(0, -1);
-            }
+            pos_x = e.pageX;
+            pos_y = e.pageY;
 
-            console.log(pos_obj);
+            left_pos = container_w / 2 - pos_x;
+            top_pos = container_h / 2 - pos_y;
+
+//            for (var prop in pos_obj) {
+//                pos_obj[prop] *= -0.222222222;
+//                pos_obj[prop] = pos_obj[prop].toString().slice(0, -1);
+//            }
+
+            console.log('l : ' + left_pos + '; t : ' + top_pos);
 
 //            $('.feather-img-bg-top').css({
 //                translateX: pos_obj.pos_x + '%',
@@ -120,15 +127,16 @@
             $('.feather-img-bg-top').animate({
 //                translateX: pos_obj.pos_x / 30 + '%',
 //                translateY: pos_obj.pos_y  / 15 + '%',
-                translateX: 4000 / pos_obj.pos_x - 40 + '%',
-                translateY: 2000 / pos_obj.pos_y - 10 + '%',
-//65 53
-//                'translateX' : '50%',
-                '-webkit-mask-position-x': 5700 / pos_obj.pos_x + 90 + '%',
-                '-webkit-mask-position-y': 2000 / pos_obj.pos_x + 10 + '%'
+                translateX: -left_pos / 100 - 50 + '%',
+                translateY: -top_pos / 100 - 50 + '%',
+                '-webkit-mask-position-x': left_pos / 50 + 50 + '%',
+                '-webkit-mask-position-y': top_pos / 10 + 50 + '%'
 //                'opacity' : '0.1'
-            }, {duration : 1})
-        })
+            }, {duration: 1})
+        });
+
+
+
 
     })
 </script>
