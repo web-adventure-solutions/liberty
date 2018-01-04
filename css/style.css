@@ -1,7 +1,9 @@
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus,
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus,
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus,
-.jumbotron-footer > div > div:first-child {
+.jumbotron-footer > div > div:first-child,
+.wedding-promotion h4,
+.production-title{
     color: #66FAF9;
 }
 
@@ -45,6 +47,10 @@
 
 .opacity-0 {
     opacity: 0;
+}
+
+.opacity-1 {
+    opacity: 1;
 }
 
 header .jumbotron h2.anim {
@@ -648,7 +654,6 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
 .wedding-promotion h4{
     text-align: center;
     font-family: 'GothamPro', sans-serif;
-    color: #66FAF9;
     font-size: 19px;
     text-transform: uppercase;
 }
@@ -681,7 +686,9 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
 
 }
 
-
+.production-title {
+    font-family: 'GothamPro', sans-serif;
+}
 
 .price-promotion h3{
     text-align: center;
@@ -721,7 +728,7 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
 }
 /**END PROMOTION**/
 
-юdouble-text-input{
+.double-text-input{
     display: inline;
   left: 50%;
 }
@@ -736,7 +743,6 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /*background-color: blueviolet;*/
 }
 
 @media (max-width: 1024px) {
@@ -766,16 +772,16 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
 
 .stroke {
     display: block;
-    height: 60vh;
-    width: 20px;
+    height: 0;
+    width: 25px;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) skew(-50deg);
-    /*transform: translate(-50%, -50%);*/
-    /*-webkit-transform: skew(-50deg);*/
-    /*-moz-transform: skew(-50deg);*/
-    /*-o-transform: skew(-50deg);*/
+    transform: translate(-50%, -50%) skew(-44deg);
+    z-index: 100;
+    -webkit-transform: translate(-50%, -50%) skew(-44deg);
+    -moz-transform: translate(-50%, -50%) skew(-44deg);
+    -o-transform: translate(-50%, -50%) skew(-44deg);
 }
 
 /*end - intro screen styles*/
