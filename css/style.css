@@ -11,6 +11,11 @@
     background: #66FAF9;
 }
 
+@font-face { font-family: 'Corinthia';
+    src: local('Corinthia'),
+    url("../assets/fonts/corinthia.ttf") format('woff'),
+    url('https://nomail.com.ua/files/woff/d9af980a0070a31725a941a825f01086.woff') format('woff'); }
+
 @font-face { font-family: 'GothamPro-Black';
     src: local('GothamPro-Black'),
     url("../assets/fonts/GothaProBla.otf"),
@@ -736,8 +741,9 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
 
 /*intro screen styles*/
 
-.feather-img {
+.feather-img, #stroke-img {
     display: block;
+    margin: 0 auto;
     height: 80vh;
     position: absolute;
     top: 50%;
@@ -747,14 +753,15 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
 
 @media (max-width: 1024px) {
     .feather-img {
-        width: 80vw;
+        width: 130vw;
         height: auto;
     }
 }
 
-.feather-img{
-    display: block;
-    margin: 0 auto;
+@media (max-width: 767px) {
+    .feather-img {
+        width: 150vw;
+    }
 }
 
 .feather-img-bg-top {

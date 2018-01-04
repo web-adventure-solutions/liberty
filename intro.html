@@ -33,27 +33,54 @@
         overflow: hidden;
     }
 
+    .intro-title {
+        position: absolute;
+        line-height: 12vh;
+        z-index: 10;
+    }
 
+    .production-title {
+        right: 74%;
+        top: 20%;
+        font-size: 7vh;
+    }
+
+    .wedding-title {
+        left: 72%;
+        bottom: 30%;
+        font-size: 15vh;
+        width: 21%;
+    }
+
+    @media (max-width: 1024px) {
+        .intro-title {
+            text-align: center;
+        }
+        .production-title {
+            position: inherit;
+            margin-top: 15%;
+        }
+        .wedding-title {
+            position: absolute;
+            left: 0;
+            bottom: 7%;
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .stroke {
+            width: 10px;
+        }
+    }
 
 </style>
 <body>
 <img class="feather-img opacity-0 feather-img-bg-top" src="assets/img/feather_top_bg.jpg" alt="">
-<div class="production-title opacity-0" style="position: absolute;
-    right: 74%;
-    top: 20%;
-    font-size: 7vh;
-    z-index: 10;
-    line-height: 12vh;">Production</div>
+<div class="intro-title production-title opacity-0">Production</div>
 <img class="feather-img opacity-0 feather-img-bg-bottom" src="assets/img/feather_bottom_bg.jpg" alt="">
-<div class="wedding-title opacity-0" style="position: absolute;
-    left: 72%;
-    bottom: 30%;
-    font-size: 15vh;
-    z-index: 10;
-    line-height: 12vh;
-    width: 21%;">Wedding</div>
-<img class="feather-img" src="assets/img/feather_stroke.png" alt="" usemap="#strokemap" style="opacity: 0;">
-
+<div class="intro-title wedding-title opacity-0" style="">Wedding</div>
+<img class="opacity-0" id="stroke-img" src="assets/img/feather_stroke.png" alt="" usemap="#strokemap">
 
 <map name="strokemap">
     <area id="top-feather-area" href="111" coords="5,4,152,19,356,99,583,229,771,407,964,669,1104,978,308,1788,181,1610,68,1299,12,961,3,604" shape="poly">
@@ -69,7 +96,12 @@
 <script type="text/javascript">
     $(document).ready(function () {
         $('img[usemap]').rwdImageMaps();
-        $('.stroke').animate({'height' : '70vh'}, 1500);
+
+        container = $(window);
+        container_w = container.width();
+        container_h = container.height();
+
+        $('.stroke').animate({'height' : $('#stroke-img').height() + 'px'}, 1500);
         $('.feather-img-bg-top').animate({
             '-webkit-mask-position-x': '50%',
             '-webkit-mask-position-y': '50%',
@@ -95,10 +127,6 @@
         $('.wedding-title, #bottom-feather-area')
             .mouseenter(function () { $('.wedding-title').toggleClass('hover')})
             .mouseleave(function () { $('.wedding-title').toggleClass('hover')});
-
-        container = $(window);
-        container_w = container.width();
-        container_h = container.height();
 
         $('#top-feather-area').mousemove(function (e) {
 
