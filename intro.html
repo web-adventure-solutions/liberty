@@ -74,6 +74,10 @@
         }
     }
 
+    .test {
+        color: yellow;
+     }
+
 </style>
 <body>
 <img class="feather-img opacity-0 feather-img-bg-top" src="assets/img/feather_top_bg.jpg" alt="">
@@ -81,14 +85,11 @@
 <img class="feather-img opacity-0 feather-img-bg-bottom" src="assets/img/feather_bottom_bg.jpg" alt="">
 <div class="intro-title wedding-title opacity-0" style="">Wedding</div>
 <img class="opacity-0" id="stroke-img" src="assets/img/feather_stroke.png" alt="" usemap="#strokemap">
-
 <map name="strokemap">
     <area id="top-feather-area" href="111" coords="5,4,152,19,356,99,583,229,771,407,964,669,1104,978,308,1788,181,1610,68,1299,12,961,3,604" shape="poly">
     <area id="bottom-feather-area" href="222" coords="311,1741,627,1993,781,2020,1525,2025,1820,2004,1947,1933,1997,1845,1998,1686,1870,1456,1692,1244,1547,1120,1059,982" shape="poly">
 </map>
-
 <span class="stroke"></span>
-
 <script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
 <script src="bower_components/jquery-ui/jquery-ui.js" type="text/javascript"></script>
 <script src="bower_components/QTransform/QTransform.js" type="text/javascript"></script>
@@ -96,70 +97,50 @@
 <script type="text/javascript">
     $(document).ready(function () {
         $('img[usemap]').rwdImageMaps();
-
         container = $(window);
         container_w = container.width();
         container_h = container.height();
-
+        featherTop = $('.feather-img-bg-top');
+        featherBottom = $('.feather-img-bg-bottom');
+        topFeatherArea = $('#top-feather-area');
+        bottomFeatherArea = $('#bottom-feather-area');
+        productionTitle = $('.production-title');
+        weddingTitle = $('.wedding-title');
+        effects_elem_arr = [
+            [ productionTitle, topFeatherArea, featherTop ],
+            [ weddingTitle, bottomFeatherArea, featherBottom ]
+        ];
+        effects_elem_arr.forEach(function (val) {
+            val[0].delay(2000).queue(function () {
+                anim_effect = effects_elem_arr.indexOf(val)===0 ? 'bounceInLeft' : 'bounceInRight';
+                $(this).addClass('opacity-1 animated ' + anim_effect + '').dequeue();
+            });
+            val[0].add(val[1])
+                .mouseenter(function () { $(val[0]).toggleClass('hover')})
+                .mouseleave(function () { $(val[0]).toggleClass('hover')});
+            val[1].mousemove(function (e) {
+                pos_x = e.pageX;
+                pos_y = e.pageY;
+                left_pos = container_w / 2 - pos_x;
+                top_pos = container_h / 2 - pos_y;
+                val[2].animate({
+                    translateX: -left_pos / 100 - 50 + '%',
+                    translateY: -top_pos / 100 - 50 + '%',
+                    '-webkit-mask-position-x': left_pos / 50 + 50 + '%',
+                    '-webkit-mask-position-y': top_pos / 10 + 50 + '%',
+                    'mask-position-x': left_pos / 50 + 50 + '%',
+                    'mask-position-y': top_pos / 10 + 50 + '%'
+                }, {duration: 0})
+            });
+        });
         $('.stroke').animate({'height' : $('#stroke-img').height() + 'px'}, 1500);
-        $('.feather-img-bg-top').animate({
+        featherTop.add(featherBottom).animate({
             '-webkit-mask-position-x': '50%',
             '-webkit-mask-position-y': '50%',
+            'mask-position-x': '50%',
+            'mask-position-y': '50%',
             'opacity' : '1'
         }, 2000);
-        $('.feather-img-bg-bottom').animate({
-            '-webkit-mask-position-x': '50%',
-            '-webkit-mask-position-y': '50%',
-            'opacity' : '1'
-        }, 2000);
-
-        $('.production-title').delay(2000).queue(function () {
-            $(this).addClass('opacity-1 animated bounceInLeft').dequeue();
-        });
-        $('.wedding-title').delay(2000).queue(function () {
-            $(this).addClass('opacity-1 animated bounceInRight').dequeue();
-        });
-
-        $('.production-title, #top-feather-area')
-            .mouseenter(function () { $('.production-title').toggleClass('hover')})
-            .mouseleave(function () { $('.production-title').toggleClass('hover')});
-
-        $('.wedding-title, #bottom-feather-area')
-            .mouseenter(function () { $('.wedding-title').toggleClass('hover')})
-            .mouseleave(function () { $('.wedding-title').toggleClass('hover')});
-
-        $('#top-feather-area').mousemove(function (e) {
-
-            pos_x = e.pageX;
-            pos_y = e.pageY;
-
-            left_pos = container_w / 2 - pos_x;
-            top_pos = container_h / 2 - pos_y;
-
-
-            $('.feather-img-bg-top').animate({
-                translateX: -left_pos / 100 - 50 + '%',
-                translateY: -top_pos / 100 - 50 + '%',
-                '-webkit-mask-position-x': left_pos / 50 + 50 + '%',
-                '-webkit-mask-position-y': top_pos / 10 + 50 + '%'
-            }, {duration: 0})
-        });
-
-        $('#bottom-feather-area').mousemove(function (e) {
-
-            pos_x = e.pageX;
-            pos_y = e.pageY;
-
-            left_pos = container_w / 2 - pos_x;
-            top_pos = container_h / 2 - pos_y;
-
-            $('.feather-img-bg-bottom').animate({
-                translateX: -left_pos / 100 - 50 + '%',
-                translateY: -top_pos / 100 - 50 + '%',
-                '-webkit-mask-position-x': left_pos / 50 + 50 + '%',
-                '-webkit-mask-position-y': top_pos / 10 + 50 + '%'
-            }, {duration: 0})
-        })
     })
 </script>
 </body>
