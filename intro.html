@@ -32,7 +32,6 @@
     body {
         overflow: hidden;
     }
-
     .intro-title {
         position: absolute;
         line-height: 12vh;
@@ -90,6 +89,17 @@
 <script src="bower_components/QTransform/QTransform.js" type="text/javascript"></script>
 <script src="bower_components/jQuery-rwdImageMaps/jquery.rwdImageMaps.min.js" type="text/javascript"></script>
 <script type="text/javascript">
+    document.addEventListener('touchstart', function(e) {
+        startX = e.changedTouches[0].pageX;
+    }, { passive: false });
+    document.addEventListener('touchmove', function(e) {
+            if ( event.touches.length == 1 ) {
+                curX = event.touches[0].pageX;
+                if(Math.abs((curX-startX))>10){
+                    event.preventDefault();
+                }
+            }
+        }, { passive: false });
     $(document).ready(function () {
         $('img[usemap]').rwdImageMaps();
         container = $(window);
@@ -101,6 +111,7 @@
         bottomFeatherArea = $('#bottom-feather-area');
         productionTitle = $('.production-title');
         weddingTitle = $('.wedding-title');
+        stroke = $('.stroke');
         effects_elem_arr = [
             [ productionTitle, topFeatherArea, featherTop ],
             [ weddingTitle, bottomFeatherArea, featherBottom ]
@@ -128,7 +139,9 @@
                 }, {duration: 0})
             });
         });
-        $('.stroke').animate({'height' : $('#stroke-img').height() + 'px'}, 1500);
+        stroke.animate({'height' : $('#stroke-img').height() + 'px'}, 1500, 'swing', function () {
+            container_w <= 1024 ? stroke.animate({'height': '50%'}, 1500) : null;
+        });
         featherTop.add(featherBottom).animate({
             '-webkit-mask-position-x': '50%',
             '-webkit-mask-position-y': '50%',
