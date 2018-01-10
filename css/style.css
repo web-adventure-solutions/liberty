@@ -80,6 +80,7 @@ header .jumbotron-footer-list-item.anim {
 body {
     padding: 0;
     margin: 0 auto;
+    overflow: scroll;
 }
 
 /**header*/
@@ -618,8 +619,10 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
      font-family: 'Corinthia', sans-serif;
      color: #66FAF9;
      font-size: 7vw;
-     left: 0%;
-     right: 0%;
+     left: 0;
+     right: 0;
+    bottom: auto;
+    width: auto;
  }
 .wedding-img{
     text-align: center;
@@ -753,54 +756,44 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
 
 /*intro screen styles*/
 
-.feather-img, #stroke-img {
-    display: block;
-    margin: 0 auto;
-    height: 80vh;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.portfolio {
+    position: relative;
+    height: 100vh;
 }
 
-@media (max-width: 1024px) {
-    .feather-img {
-        width: 130vw;
-        height: auto;
-    }
+.portfolio .wedding-title {
+    left: 65%;
+    bottom: 30%;
+    font-size: 15vh;
+    width: 21%;
 }
 
-@media (max-width: 767px) {
-    .feather-img {
-        width: 150vw;
-    }
+.portfolio .production-title {
+    right: 67%;
+    top: 35%;
+    font-size: 8vh;
+}
+
+.feather-img {
+    height: 50vh;
 }
 
 .feather-img-bg-top {
-    -webkit-mask: url("../assets/img/feather_top.png") no-repeat;
-    -webkit-mask-position-x: 140%;
-    -webkit-mask-position-y: -620%;
-    -webkit-mask-size: 49%;
+    -webkit-mask-position-x: 50%;
+    -webkit-mask-position-y: 75%;
+    -webkit-mask-size: 48%;
 }
+
 .feather-img-bg-bottom {
-    -webkit-mask: url("../assets/img/feather_bottom.png") no-repeat;
-    -webkit-mask-position-x: -79%;
-    -webkit-mask-position-y: 1000%;
-    -webkit-mask-size: 50%;
+    -webkit-mask-position-x: 50%;
+    -webkit-mask-position-y: 70%;
 }
 
 .stroke {
-    display: block;
-    height: 0;
-    width: 25px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) skew(-44deg);
-    z-index: 100;
-    -webkit-transform: translate(-50%, -50%) skew(-44deg);
-    -moz-transform: translate(-50%, -50%) skew(-44deg);
-    -o-transform: translate(-50%, -50%) skew(-44deg);
+    height: 50vh;
+    width: 10px;
+    transform: translate(-50%, -50%) skew(-45deg);
+    top: 52%;
 }
 
 /*end - intro screen styles*/
@@ -870,7 +863,6 @@ footer {
 .footer-logo{
     display: inline;
     width: 15%;
-
 }
 
 .social-connect{
