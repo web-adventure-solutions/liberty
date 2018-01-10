@@ -38,6 +38,11 @@
         z-index: 10;
     }
 
+    .intro-title a {
+        text-decoration: none;
+        color: inherit;
+    }
+
     .production-title {
         right: 74%;
         top: 20%;
@@ -54,16 +59,16 @@
     @media (max-width: 1024px) {
         .intro-title {
             text-align: center;
-        }
-        .production-title {
-            position: inherit;
-            margin-top: 15%;
-        }
-        .wedding-title {
             position: absolute;
             left: 0;
-            bottom: 7%;
             width: 100%;
+        }
+        .production-title {
+            top: 10%;
+            width: 100%;
+        }
+        .wedding-title {
+            bottom: 7%;
         }
     }
 
@@ -75,9 +80,9 @@
 </style>
 <body>
 <img class="feather-img opacity-0 feather-img-bg-top" src="assets/img/feather_top_bg.jpg" alt="">
-<div class="intro-title production-title opacity-0">Production</div>
+<div class="intro-title production-title opacity-0"><a href="www">Production</a></div>
 <img class="feather-img opacity-0 feather-img-bg-bottom" src="assets/img/feather_bottom_bg.jpg" alt="">
-<div class="intro-title wedding-title opacity-0" style="">Wedding</div>
+<div class="intro-title wedding-title opacity-0" style=""><a href="rrr">Wedding</a></div>
 <img class="opacity-0" id="stroke-img" src="assets/img/feather_stroke.png" alt="" usemap="#strokemap">
 <map name="strokemap">
     <area id="top-feather-area" href="111" coords="5,4,152,19,356,99,583,229,771,407,964,669,1104,978,308,1788,181,1610,68,1299,12,961,3,604" shape="poly">
@@ -112,6 +117,7 @@
         productionTitle = $('.production-title');
         weddingTitle = $('.wedding-title');
         stroke = $('.stroke');
+        strokeImg = $('#stroke-img');
         effects_elem_arr = [
             [ productionTitle, topFeatherArea, featherTop ],
             [ weddingTitle, bottomFeatherArea, featherBottom ]
@@ -139,8 +145,11 @@
                 }, {duration: 0})
             });
         });
-        stroke.animate({'height' : $('#stroke-img').height() + 'px'}, 1500, 'swing', function () {
-            container_w <= 1024 ? stroke.animate({'height': '50%'}, 1500) : null;
+        stroke.animate({'height' : strokeImg.height() + 'px'}, 1500, 'swing', function () {
+            if (container_w <= 1024) {
+                stroke.animate({'height': '50%'}, 1500);
+                strokeImg.css({'height': '50%'});
+            }
         });
         featherTop.add(featherBottom).animate({
             '-webkit-mask-position-x': '50%',
