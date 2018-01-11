@@ -14,14 +14,14 @@ body {
 
 @media (max-width: 1024px) {
     .feather-img {
-        width: 130vw;
+        width: 90vh;
         height: auto;
     }
 }
 
 @media (max-width: 767px) {
     .feather-img {
-        width: 150vw;
+        width: 90vh;
     }
 }
 
