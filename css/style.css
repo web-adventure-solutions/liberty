@@ -784,7 +784,7 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
     left: 70%;
     bottom: 30%;
     font-size: 15vh;
-    width: 21%;
+    width: max-content;
 }
 
 .portfolio .production-title {
@@ -793,10 +793,11 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
     font-size: 8vh;
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 1024px){
     .portfolio .wedding-title {
-        left: 15%;
+        left: 0;
         bottom: 5%;
+        width: auto;
     }
 
     .portfolio .production-title {
