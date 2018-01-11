@@ -1,3 +1,16 @@
+#testImg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 767px) {
+    #testImg {
+        width: 80%;
+    }
+}
+
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus,
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus,
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus,
@@ -768,7 +781,7 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
 }
 
 .portfolio .wedding-title {
-    left: 65%;
+    left: 70%;
     bottom: 30%;
     font-size: 15vh;
     width: 21%;
