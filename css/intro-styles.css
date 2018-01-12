@@ -52,7 +52,7 @@ body {
     -o-transform: translate(-50%, -50%) skew(-44deg);
 }
 
-.production-title:before, .wedding-title:before {
+.production-title:before, .wedding-title:before, ul.header-menu li:before {
     content: "";
     position: absolute;
     width: 100%;
@@ -65,10 +65,14 @@ body {
     transform: scaleX(0);
     transition: .25s linear;
 }
-.production-title.hover:before,
+ul.header-menu li {
+    line-height: 10px;
+}
 .production-title.hover:before,
 .wedding-title.hover:before,
-.wedding-title.hover:before {
+.production-title:hover:before,
+.wedding-title:hover:before,
+ul.header-menu li:hover:before {
     visibility: visible;
     transform: scaleX(1);
 }

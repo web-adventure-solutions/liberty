@@ -73,7 +73,7 @@ $(document).ready(function () {
                 $(this).addClass('stripe-anim-end', 3000, 'easeOutQuint');
             });
         });
-        $('header p.opacity-0').animate({'opacity': 1}, 1000);
+        $('header .jumbotron-content').animate({'opacity': 1}, 1000);
 
 
     }

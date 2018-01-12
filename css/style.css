@@ -11,13 +11,16 @@
     }
 }
 
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus,
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus,
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus,
 .jumbotron-footer > div > div:first-child,
 .wedding-promotion h4,
 .production-title{
     color: #66FAF9;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #fff;
 }
 
 .parallelogram, #stripe, .stroke {
@@ -93,7 +96,7 @@ header .jumbotron-footer-list-item.anim {
 body {
     padding: 0;
     margin: 0 auto;
-    overflow: scroll;
+    overflow: visible;
 }
 
 /**header*/
@@ -117,7 +120,7 @@ header {
 }
 
 .navbar-brand img {
-    height: 80px;
+    height: 95px;
 }
 
 @media (max-width: 767px) {
@@ -151,9 +154,11 @@ nav .container-fluid {
 .navbar-default .navbar-nav li a {
     font-family: 'GothamPro', sans-serif;
     color: #fff;
-    font-size: 12pt;
+    font-size: 10pt;
     font-weight: bold;
     letter-spacing: 1px;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .header-menu {
@@ -245,6 +250,7 @@ header .navbar-toggle {
 /**end - header dropdown*/
 
 .header-menu > li {
+    height: 70px;
     margin-right: 30px;
 }
 
@@ -304,13 +310,25 @@ header .jumbotron {
     font-family: 'GothamPro-Light', sans-serif;
     position: relative;
     z-index: 2;
+    margin-left: 7%;
+    width: 70%;
+}
+
+header .jumbotron .jumbotron-content {
+    font-size: 25pt;
+}
+
+header .jumbotron .jumbotron-content div {
+    margin-left: 153px;
+    margin-top: -33px;
+    margin-bottom: 10px;
 }
 
 @media (max-width: 767px) {
     header .jumbotron {
         text-align: center;
     }
-    header .jumbotron p {
+    header .jumbotron .jumbotron-content {
         font-size: 3vh;
     }
     header .jumbotron h2 {
@@ -345,8 +363,9 @@ header .jumbotron {
     header .jumbotron h2 .parallelogram:last-child {
         background: transparent;
     }
-    header .jumbotron .parallelogram:last-child .parallelogram-inner-text {
-        color: #fff;
+    header .jumbotron .jumbotron-footer .parallelogram-inner-text {
+        color: #4f504f;
+        font-size: 13pt;
     }
     .jumbotron-footer .jumbotron-footer-list-item [class*='col-xs'] {
         width: auto;
@@ -356,6 +375,13 @@ header .jumbotron {
 
 header .jumbotron h2 {
     position: relative;
+    font-family: 'GothamPro-Medium', sans-serif;
+    text-align: center;
+    margin-left: -130px;
+}
+
+header .jumbotron h2 .parallelogram {
+    background-color: #50bcbc;
 }
 
 header .parallelogram {
@@ -375,7 +401,7 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
 }
 
 .parallelogram .parallelogram-inner-text {
-    color: #000;
+    color: #fff;
     -webkit-transform: skew(20deg);
     -moz-transform: skew(20deg);
     -o-transform: skew(20deg);
@@ -384,6 +410,10 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
 .jumbotron-footer {
     margin-left: -20px;
     position: relative;
+}
+.jumbotron-footer .col-xs-12 {
+    padding-left: 7px;
+    padding-right: 0;
 }
 
 @media (min-width: 1024px) {
@@ -400,9 +430,9 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
 
 
 .jumbotron-footer .parallelogram {
-    height: 40px;
+    height: 32px;
     text-align: center;
-    padding: 10px;
+    padding: 4px 10px;
 }
 
 .jumbotron-footer .jumbotron-footer-list-item  {
@@ -410,22 +440,20 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
     position: relative;
 }
 
+.jumbotron-footer .jumbotron-footer-list-item:last-child .parallelogram {
+    width: 170px;
+}
+
 .jumbotron-footer .parallelogram .parallelogram-inner-text {
     color: #fff;
-    font-family: 'GothamPro-Medium', sans-serif;
+    font-family: 'GothamPro-Bold', sans-serif;
 }
 
 .jumbotron-footer .jumbotron-footer-list-item-num {
     font-family: 'GothamPro-Black', sans-serif;
-    font-size: 32pt;
+    font-size: 24pt;
     padding: 0 12px;
-    line-height: 40px;
-}
-
-.jumbotron-footer .jumbotron-footer-list-item:last-child .parallelogram {
-    width: 180px;
-    padding-top: 6px;
-    line-height: 15px;
+    line-height: 32px;
 }
 
 /*end - jumbotron*/
