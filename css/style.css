@@ -566,7 +566,7 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
     /*margin-top: 80%;*/
     height: 100%;
     width: 100%;
-    margin-right: 10px;
+    /*margin-right: 10px;*/
     position: relative;
     display: inline-block;
 }
@@ -575,14 +575,20 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
     /*position: relative;*/
     /*top: 90px;*/
     /*display: inline-block;*/
+    padding-top: 4%;
 }
+/*.about-team-width-bottom {*/
+     /*padding-right: 0;*/
+     /*padding-left: 0; */
+/*}*/
 
 .about-team-we-work2 h3, h4{
     color: #66FAF9;
     font-family: 'GothamPro-Light', sans-serif;
-    font-size: 100pt;
+    font-size: calc(4vw + 2vh + 1vmin);
     /*margin-top: 12%;*/
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
+    padding-left: 8%;
 }
 /*.about-team-we-work2 h4{*/
     /*font-family: 'GothamPro-Bold', sans-serif;*/
@@ -592,8 +598,15 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
 /*}*/
 .about-team-we-work2 p{
     font-family: 'GothamPro-Light', sans-serif;
-    font-size: 16pt;
+    font-size: calc(2vw + 1vh + 1vmin);
+    padding-left: 8%;
 }
+
+/*.about-team-width-bottom,*/
+/*.img-responsive-size{*/
+    /*padding-left: 0;*/
+    /*padding-right: 0;*/
+/*}*/
 /**END TEAM**/
 /**PROMOTION**/
 
@@ -613,9 +626,9 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
 .wedding-img{
     text-align: center;
     font-family: 'Corinthia', sans-serif;
-    font-size: 6vw;
     left: 0%;
     right: 0%;
+    font-size: calc(3vw + 2vh + 2vmin);
 }
 
 .wedding-img-img{
@@ -796,8 +809,9 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
     height: 40vh;
     -webkit-background-size: 100%;
     background-size: cover;
-
 }
+
+
 /***END** Brands Slider***/
 
 /** FOOTER **/
@@ -857,8 +871,8 @@ footer {
 }
 
 .wrap {
-    width: 450px;
-    margin: 0 auto;
+    width: 88%;
+    /*margin: 0 auto;*/
     position: absolute;
 
 }
