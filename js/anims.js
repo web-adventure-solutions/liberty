@@ -12,7 +12,7 @@ $(document).ready(function () {
     console.log('vertical : ' + posVertical);
 
 
-    if (mobView && posVertical) {
+    if (mobView) {
         stripe
             .animate({'right' : '61vh'}, { duration : 3000, queue : false})
             .animate({'-webkit-mask-position-x' : '20px'}, { duration : 3000, queue : false});
