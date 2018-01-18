@@ -20,9 +20,11 @@ $screen-md-max:              ($screen-lg-min - 1);
 
 @mixin media-for($range) {
   @if $range == xs {
-    @media (max-width: $screen-xs) { @content; }
+    @media (max-width: 480px) { @content; }
+  } @else if $range == xs-min-v {
+    @media (max-width: 459px) { @content; }
   } @else if $range == xs-h {
-  @media (max-height: $screen-xs) { @content; }
+  @media (max-height: 459px) { @content; }
   } @else if $range == xs-max {
     @media (max-width: $screen-xs-max) { @content; }
   } @else if $range == sm {
@@ -32,6 +34,34 @@ $screen-md-max:              ($screen-lg-min - 1);
   } @else if $range == lg {
     @media (min-width: $screen-lg) { @content; }
   }
+}
+
+@mixin media-for-xs {
+  @media (max-width: 480px) { @content; }
+}
+
+@mixin media-for-xs-min {
+  @media (max-width: 360px) and (max-height: 570px) { @content; }
+}
+
+@mixin media-for-xs-h {
+  @media (max-height: 459px) { @content; }
+}
+
+@mixin media-for-xs-max {
+  @media (max-width: 767px) { @content; }
+}
+
+@mixin media-for-sm {
+  @media (min-width: 768px) { @content; }
+}
+
+@mixin media-for-md {
+  @media (min-width: 992px) { @content; }
+}
+
+@mixin media-for-lg {
+  @media (min-width: 1200px) { @content; }
 }
 
 .visible-xs-h {
@@ -49,3 +79,10 @@ $screen-md-max:              ($screen-lg-min - 1);
     display: none !important;
   }
 }
+
+.hidden-xs-v {
+  @include media-for(xs-min-v){
+    display: none !important;
+  }
+}
+

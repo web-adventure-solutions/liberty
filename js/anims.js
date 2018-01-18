@@ -7,21 +7,24 @@ $(document).ready(function () {
     // see if mobile device is in horizontal position
     mobView = (winW < 768 && winH < 1024);
     posVertical = (winW < winH);
+    xsMin = (winW <= 360 && winH <= 570);
+    xsMax = (winW <= 768);
+    xs = (winW <= 480);
 
     console.log('mobile : ' + mobView);
     console.log('vertical : ' + posVertical);
 
 
-    if (mobView) {
+    if (xsMin) {
+        stripe
+            .animate({'right' : '67vh'}, { duration : 3000, queue : false})
+            .animate({'-webkit-mask-position-x' : '45px'}, { duration : 3000, queue : false})
+            .animate({'-webkit-mask-size' : '100%'}, { duration : 3000, queue : false})
+    } else if (xsMax) {
         stripe
             .animate({'right' : '61vh'}, { duration : 3000, queue : false})
             .animate({'-webkit-mask-position-x' : '20px'}, { duration : 3000, queue : false});
-    } else if (!mobView) {
-        stripe.addClass('stripe-anim-end', 3000)
-    }
-
-
-
+    } else stripe.addClass('stripe-anim-end', 3000);
 
     $('header .jumbotron-content').animate({'opacity': 1}, 1000);
     $('header .jumbotron h2, .jumbotron .parallelogram')
