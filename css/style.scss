@@ -22,6 +22,7 @@
   }
 }
 
+
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus,
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus,
 .jumbotron-footer > div > div:first-child,
@@ -586,88 +587,85 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
 /**end - header*/
 
 /**TEAM**/
-.our-team-title{
+
+.our-team{
+  & .our-team-title{
     position: relative;
     top: 20px;
-}
-.our-team-title h4{
-    text-align: center;
-    color: #4f504f;
-    top: 2vh;
-    font-family: 'GothamPro', sans-serif;
-    font-size: 2vw;
-    position: absolute;
-    left: 0%;
-    right: 0%;
-}
-.our-team-title h1 {
-    text-align: center;
-    font-family: 'GothamPro-Bold', sans-serif;
-    color: #4f504f;
-    font-size: 8vw;
-    font-weight: bolder;
-    opacity: 0.1;
-    text-transform: uppercase;
-    left: 0%;
-    right: 0%;
-}
-
-.our-team-title h3{
-    text-align: center;
-    font-family: 'GothamPro-Bold', sans-serif;
-    color: #4f504f;
-    top: 6vh;
-    letter-spacing: 1vw;
-    font-size: 2vw;
-    position: absolute;
-    left: 0%;
-    right: 0%;
-    text-transform: uppercase;
-}
-.about-team-width {
+    & h4 {
+      text-align: center;
+      color: #4f504f;
+      top: 2vh;
+      font-family: 'GothamPro', sans-serif;
+      font-size: 2vw;
+      position: absolute;
+      left: 0%;
+      right: 0%;
+    }
+    & h1{
+      text-align: center;
+      font-family: 'GothamPro-Bold', sans-serif;
+      color: #4f504f;
+      font-size: 8vw;
+      font-weight: bolder;
+      opacity: 0.1;
+      text-transform: uppercase;
+      left: 0%;
+      right: 0%;
+    }
+    & h3{
+      text-align: center;
+      font-family: 'GothamPro-Bold', sans-serif;
+      color: #4f504f;
+      top: 6vh;
+      letter-spacing: 1vw;
+      font-size: 2vw;
+      position: absolute;
+      left: 0%;
+      right: 0%;
+      text-transform: uppercase;
+    }
+  }
+  & .about-team-width {
     margin-top: 90px;
     text-align: center;
+    & .about-team{
+      position: relative;
+      display: inline-block;
+      //-webkit-border-radius: 37px;
+      //-moz-border-radius: 37px;
+      /*padding: 30px 30px 30px 30px;*/
+      /* text-decoration: none; */
+      //border-left: 6px solid gray;
+      & h3{
+        color: #66FAF9;
+        font-family: 'GothamPro', sans-serif;
+        font-size: 31px;
+        font-weight: bold;
+        /*margin-top: 12%;*/
+      }
+      & p{
+        /*margin-top: -17%;
+        height: 160px;*/
+        font-family: 'GothamPro', sans-serif;
+        font-size: 17px;
+        opacity: 0.7;
+      }
+      & .about-team-img{
+        height: 40%;
+        width: 40%;/**/
+        -webkit-border-radius: 37px;
+        -moz-border-radius: 37px;
+        border: solid #66FAF9 10px;
+        border-radius: 200px;
+        position: relative;
+        display: inline-block;
+      }
+    }
+  }
 }
-.about-team-width h3{
-    color: #66FAF9;
-    font-family: 'GothamPro', sans-serif;
-    font-size: 31px;
-    font-weight: bold;
-    /*margin-top: 12%;*/
-}
-.about-team-width h4{
-    /*margin-top: 9%;*/
-    font-family: 'GothamPro', sans-serif;
-    font-size: 21px;
-    opacity: 0.4;
-}
-.about-team-width p{
-    /*margin-top: -17%;
-    height: 160px;*/
-    font-family: 'GothamPro', sans-serif;
-    font-size: 14px;
-}
-.about-team-img{
-    height: 40%;
-    width: 40%;/**/
-    -webkit-border-radius: 37px;
-    -moz-border-radius: 37px;
-    border: solid #66FAF9 10px;
-    border-radius: 200px;
-    position: relative;
-    display: inline-block;
 
-}
-.about-team{
-    position: relative;
-    display: inline-block;
-    -webkit-border-radius: 37px;
-    -moz-border-radius: 37px;
 
-    /*padding: 30px 30px 30px 30px;*/
-
-    /* text-decoration: none; */
-}
 
 .our-team-title-two{
     position: relative;
@@ -818,7 +816,6 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
 
 .price-promotion{
     position: relative;
-    top: -100px;
 }
 .price-promotion h4{
     text-align: center;
