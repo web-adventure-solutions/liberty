@@ -18,30 +18,16 @@ $screen-xs-max:              ($screen-sm-min - 1);
 $screen-sm-max:              ($screen-md-min - 1);
 $screen-md-max:              ($screen-lg-min - 1);
 
-@mixin media-for($range) {
-  @if $range == xs {
-    @media (max-width: 480px) { @content; }
-  } @else if $range == xs-min-v {
-    @media (max-width: 459px) { @content; }
-  } @else if $range == xs-h {
-  @media (max-height: 459px) { @content; }
-  } @else if $range == xs-max {
-    @media (max-width: $screen-xs-max) { @content; }
-  } @else if $range == sm {
-    @media (min-width: $screen-sm) { @content; }
-  } @else if $range == md {
-    @media (min-width: $screen-md) { @content; }
-  } @else if $range == lg {
-    @media (min-width: $screen-lg) { @content; }
-  }
-}
-
 @mixin media-for-xs {
   @media (max-width: 480px) { @content; }
 }
 
 @mixin media-for-xs-min {
   @media (max-width: 360px) and (max-height: 570px) { @content; }
+}
+
+@mixin media-for-xs-min-v {
+  @media (max-width: 459px) { @content; }
 }
 
 @mixin media-for-xs-h {
@@ -54,6 +40,10 @@ $screen-md-max:              ($screen-lg-min - 1);
 
 @mixin media-for-sm {
   @media (min-width: 768px) { @content; }
+}
+
+@mixin media-for-sm-max {
+  @media (max-width: 991px) { @content; }
 }
 
 @mixin media-for-md {
@@ -69,20 +59,25 @@ $screen-md-max:              ($screen-lg-min - 1);
 }
 
 .visible-xs-h {
-  @include media-for(xs-h){
+  @include media-for-xs-h {
     display: block !important;
   }
 }
 
 .hidden-xs-h {
-  @include media-for(xs-h){
+  @include media-for-xs-h{
     display: none !important;
   }
 }
 
 .hidden-xs-v {
-  @include media-for(xs-min-v){
+  @include media-for-xs-min-v {
     display: none !important;
   }
 }
 
+.hidden-xs-sm {
+  @include media-for-sm {
+    display: none !important;
+  }
+}

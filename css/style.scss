@@ -38,7 +38,7 @@
 }
 
 .parallelogram, #stripe, .stroke {
-    background: #66FAF9;
+    background: $primary-theme-color;
 }
 
 @font-face { font-family: 'Corinthia';
@@ -123,12 +123,24 @@ header {
     background-color: transparent;
 }
 
+
+
 .navbar-default {
   background-color: transparent;
   border-right-color: transparent;
   border-bottom-color: #6c767661;
   border-left-color: transparent;
   z-index: 100;
+
+  & .navbar-collapse {
+    @include media-for-xs-max {
+      position: absolute;
+      width: 80%;
+      right: 0;
+      border-color: transparent;
+      margin: 0 auto;
+    }
+  }
 
   & .navbar-nav > li > a {
     padding: 40px 5px;
@@ -137,56 +149,41 @@ header {
     font-size: 10pt;
     font-weight: bold;
     letter-spacing: 1px;
-  }
-
-  @include media-for-xs-max {
-    & .navbar-collapse {
-      position: absolute;
-      width: 80%;
-      right: 0;
-      border-color: transparent;
-      margin: 0 auto;
-    }
-    & .navbar-nav > li > a {
+    @include media-for-xs-max {
       font-size: 20px;
       text-align: center;
       display: block;
       padding: 0;
       line-height: 50px;
     }
-  }
-
-  @include media-for-xs-h {
-    & .navbar-nav > li > a {
+    @include media-for-xs-h {
       font-size: 15px;
     }
   }
 
-  & .navbar-toggle:hover, & .navbar-toggle:focus {
-    background-color: transparent;
-  }
-}
-
-.navbar-brand {
-  & img {
-    height: 95px;
-    &.visible-xs-h {
-      height: 25vh;
+  & .navbar-brand {
+    & img {
+      height: 95px;
+      &.visible-xs-h {
+        height: 25vh;
+      }
     }
   }
-}
 
-@media (max-width: 767px) {
-    header .container-fluid {
-        margin-left: -20px;
+  & .navbar-toggle {
+    &:hover, &:focus {
+      background-color: transparent;
     }
-    .navbar-toggle {
-        margin-top: 50px;
+    @include media-for-xs-max {
+      margin-top: 50px;
     }
+  }
+
+
 }
 
 nav .container-fluid {
-    padding: 0 25px 0 3em;
+    padding: 0 25px 0;
 }
 
 .header-menu {
@@ -330,35 +327,67 @@ header .jumbotron {
     font-family: 'GothamPro-Light', sans-serif;
     position: relative;
     z-index: 2;
-    margin-left: 7%;
-    width: 70%;
 
-  @include media-for-xs-max {
-      text-align: center;
-      margin: 0 auto;
-      padding: 0;
-      width: 90%;
-  }
-
-  @include media-for-xs {
-    margin-top: 20%;
+  @include media-for-xs-min {
+    margin-top: 5%;
   }
 
   @include media-for-xs-h {
     margin-top: 0;
   }
 
-  @include media-for-xs-min {
-    margin-top: 5%;
+  @include media-for-xs {
+    margin-top: 20%;
+  }
+
+  @include media-for-xs-max {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    width: 90%;
+  }
+
+  @include media-for-sm-max {
+    width: 100%;
+  }
+
+  @include media-for-md {
+    width: 80%;
+  }
+
+  @include media-for-lg {
+    width: 70%;
+    margin-left: 7%;
   }
 
   & h2 {
     position: relative;
     font-family: 'GothamPro-Medium', sans-serif;
     text-align: center;
-    margin-left: -130px;
+    margin-bottom: 0;
+
+    @include media-for-lg {
+      margin-left: -130px;
+    }
+
+    @include media-for-sm-max {
+      display: block;
+      margin: 0 auto;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    @include media-for-xs-max {
+      font-size: 4vh;
+      line-height: 35px;
+      margin: 0;
+    }
 
     & .parallelogram:first-child {
+      @include media-for-xs-max {
+        margin-bottom: 15px;
+        background: transparent;
+      }
       & .parallelogram-inner-text {
         @include media-for-xs-h {
           font-size: 20vh;
@@ -369,84 +398,84 @@ header .jumbotron {
       }
     }
 
-    & .parallelogram:last-child {
-      @include media-for-xs-max {
-        line-height: 8vh;
-        font-size: 9vw;
-        height: 8vh;
+    & .parallelogram {
+      &:first-child {
+        @media (max-width: 320px) {
+          margin-bottom: 0;
+        }
       }
-      @include media-for-xs-h {
-        margin-top: 2%;
-        height: 18vh;
+      &:last-child {
+        @include media-for-xs-max {
+          line-height: 8vh;
+          font-size: 9vw;
+          height: 8vh;
+        }
+        @include media-for-xs-h {
+          margin-top: 2%;
+          height: 18vh;
+        }
       }
-
     }
   }
 
   & .jumbotron-content {
     font-size: 25pt;
+    @include media-for-xs-max {
+      font-size: 3vh;
+    }
+    & img {
+        margin: 10px 12px;
+        width: 500px;
+    }
     & div {
-      margin-left: 153px;
-      margin-top: -33px;
+      margin-left: 170px;
+      margin-top: -15px;
       margin-bottom: 10px;
       @include media-for-xs-max {
         margin: 5% 0;
         font-size: 4vh;
       }
+      @include media-for-sm-max {
+        margin-left: 0;
+        text-align: center;
+      }
+      @media (max-width: 320px) {
+        margin-bottom: 0;
+      }
     }
   }
-}
 
-@media (max-width: 767px) {
-    header .jumbotron h2 {
-        font-size: 4vh;
-        line-height: 35px;
-        margin: 0;
-    }
-
-    header .jumbotron h2 .parallelogram:first-child {
-        margin-bottom: 15px;
+  & .jumbotron-footer {
+    position: relative;
+    @include media-for-xs-max {
+      width: 100%;
+      margin-left: 0;
+      position: relative;
     }
 
-    header .jumbotron .parallelogram:first-child {
-        background: transparent;
+    @include media-for-lg {
+      margin-left: -20px;
     }
-    header .jumbotron .parallelogram:first-child .parallelogram-inner-text {
-        color: #fff;
-    }
-    header .jumbotron .jumbotron-content {
-        font-size: 3vh;
-    }
-    header .jumbotron .jumbotron-footer {
-        width: 100%;
-        margin-left: 0;
-        position: relative;
-    }
-    header .jumbotron .jumbotron-footer .jumbotron-footer-list-item {
-        float: none;
-    }
-    header .jumbotron .jumbotron-footer .jumbotron-footer-list-item-num {
+
+    & .jumbotron-footer-list-item-num {
+      @include media-for-xs-max {
         color: #fff !important;
         font-size: 26pt !important;
         line-height: 40px;
+      }
     }
-    header .jumbotron .jumbotron-footer .parallelogram {
+
+    & .parallelogram {
+      @include media-for-xs-max {
         width: 100% !important;
         background-color: transparent;
         border: 2px solid #66FAF9;
         font-size: 18px;
         height: 40px;
         padding: 6px 0;
+      }
     }
-}
-
-@media (max-width: 320px) {
-    header .jumbotron h2 .parallelogram:first-child {
-        margin-bottom: 0;
-    }
-    header .jumbotron .jumbotron-content div {
-        margin-bottom: 0;
-    }
+  }
 }
 
 @media (min-width: 768px) {
@@ -491,11 +520,6 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
   -webkit-transform: skew(20deg);
   -moz-transform: skew(20deg);
   -o-transform: skew(20deg);
-}
-
-.jumbotron-footer {
-    margin-left: -20px;
-    position: relative;
 }
 
 .jumbotron-footer .col-xs-12 {
@@ -629,6 +653,8 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
     }
   }
   & .about-team-width {
+    display: flex;
+    flex-wrap: wrap;
     margin-top: 90px;
     text-align: center;
     & .about-team{
