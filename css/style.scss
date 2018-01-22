@@ -11,20 +11,6 @@
   background-color: #1f4443e6;
 }
 
-#testImg {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
-@include media-for-xs {
-  #testImg {
-    width: 80%;
-  }
-}
-
-
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus,
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus,
 .jumbotron-footer > div > div:first-child,
@@ -962,7 +948,11 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
 }
 
 .feather-img {
-    height: 50vh;
+    height: auto;
+  max-width: 100%;
+  @include media-for-lg {
+    max-width: 50%;
+  }
 }
 
 .feather-img-bg-top {
@@ -977,9 +967,8 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
 }
 
 .stroke {
-    height: 50vh;
     width: 10px;
-    transform: translate(-50%, -50%) skew(-45deg);
+    transform: translate(-50%, -50%) skew(-44deg);
 }
 
 /*end - intro screen styles*/

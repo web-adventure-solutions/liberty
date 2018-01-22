@@ -1,15 +1,14 @@
-
-document.addEventListener('touchstart', function(e) {
-    startX = e.changedTouches[0].pageX;
-}, { passive: false });
-document.addEventListener('touchmove', function(e) {
-    if ( event.touches.length == 1 ) {
-        curX = event.touches[0].pageX;
-        if(Math.abs((curX-startX))>10){
-            event.preventDefault();
-        }
-    }
-}, { passive: false });
+// document.addEventListener('touchstart', function(e) {
+//     startX = e.changedTouches[0].pageX;
+// }, { passive: false });
+// document.addEventListener('touchmove', function(e) {
+//     if ( event.touches.length == 1 ) {
+//         curX = event.touches[0].pageX;
+//         if(Math.abs((curX-startX))>10){
+//             event.preventDefault();
+//         }
+//     }
+// }, { passive: false });
 $(document).ready(function () {
     $('img[usemap]').rwdImageMaps();
     container = $(window);
