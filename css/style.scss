@@ -966,21 +966,20 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
 }
 
 .feather-img-bg-top {
-    -webkit-mask-position-x: 50%;
-    -webkit-mask-position-y: 75%;
-    -webkit-mask-size: 48%;
+    //-webkit-mask-position-x: 50%;
+    //-webkit-mask-position-y: 75%;
+    //-webkit-mask-size: 48%;
 }
 
 .feather-img-bg-bottom {
-    -webkit-mask-position-x: 50%;
-    -webkit-mask-position-y: 70%;
+    //-webkit-mask-position-x: 50%;
+    //-webkit-mask-position-y: 70%;
 }
 
 .stroke {
     height: 50vh;
     width: 10px;
     transform: translate(-50%, -50%) skew(-45deg);
-    top: 52%;
 }
 
 /*end - intro screen styles*/

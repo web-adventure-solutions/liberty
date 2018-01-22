@@ -39,20 +39,23 @@ $(document).ready(function () {
             .mouseleave(function () {
                 $(val[0]).toggleClass('hover')
             });
-        val[1].mousemove(function (e) {
-            pos_x = e.pageX;
-            pos_y = e.pageY;
-            left_pos = container_w / 2 - pos_x;
-            top_pos = container_h / 2 - pos_y;
-            val[2].animate({
-                translateX: -left_pos / 100 - 50 + '%',
-                translateY: -top_pos / 100 - 50 + '%',
-                '-webkit-mask-position-x': left_pos / 50 + 50 + '%',
-                '-webkit-mask-position-y': top_pos / 10 + 50 + '%',
-                'mask-position-x': left_pos / 50 + 50 + '%',
-                'mask-position-y': top_pos / 10 + 50 + '%'
-            }, {duration: 0})
-        });
+        // todo change to "index" on production
+        if (window.location.href.indexOf("intro") !== -1) {
+            val[1].mousemove(function (e) {
+                pos_x = e.pageX;
+                pos_y = e.pageY;
+                left_pos = container_w / 2 - pos_x;
+                top_pos = container_h / 2 - pos_y;
+                val[2].animate({
+                    translateX: -left_pos / 100 - 50 + '%',
+                    translateY: -top_pos / 100 - 50 + '%',
+                    '-webkit-mask-position-x': left_pos / 50 + 50 + '%',
+                    '-webkit-mask-position-y': top_pos / 10 + 50 + '%',
+                    'mask-position-x': left_pos / 50 + 50 + '%',
+                    'mask-position-y': top_pos / 10 + 50 + '%'
+                }, {duration: 0})
+            });
+        }
     });
     stroke.animate({'height': '100vh'}, 1500, 'swing', function () {
         if (container_w <= 1024) {
