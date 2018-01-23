@@ -217,9 +217,9 @@
 </section>
 <section class="portfolio">
     <img class="feather-img feather-img-bg-top" src="assets/img/feather_top_bg.jpg" alt="">
-    <div class="intro-title production-title"><a href="www">Production</a></div>
+    <div class="intro-title production-title opacity-0"><a href="www">Production</a></div>
     <img class="feather-img feather-img-bg-bottom" src="assets/img/feather_bottom_bg.jpg" alt="">
-    <div class="intro-title wedding-title" style=""><a href="rrr">Wedding</a></div>
+    <div class="intro-title wedding-title opacity-0" style=""><a href="rrr">Wedding</a></div>
     <img class="opacity-0" id="stroke-img" src="assets/img/feather_stroke.png" alt="" usemap="#strokemap">
     <span class="stroke"></span>
 </section>
@@ -367,8 +367,13 @@
 <script src="bower_components/bootstrap/dist/js/bootstrap.js" type="text/javascript"></script>
 <script src="js/anims.js" type="text/javascript"></script>
 <script src="js/intro-anims.js" type="text/javascript"></script>
+<script src="bower_components/aos/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 <script src="js/send-text-input.js" type="text/javascript"></script>
 <script src="bower_components/QTransform/QTransform.js" type="text/javascript"></script>
+<!--todo : take away jquery.rwdImageMaps.min.js from index file-->
 <script src="bower_components/jQuery-rwdImageMaps/jquery.rwdImageMaps.min.js" type="text/javascript"></script>
 </body>
 </html>
