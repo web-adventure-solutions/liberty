@@ -583,38 +583,8 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
   & .our-team-title{
     position: relative;
     top: 20px;
-    & h4 {
-      text-align: center;
-      color: #4f504f;
-      top: 2vh;
-      font-family: 'GothamPro', sans-serif;
-      font-size: 2vw;
-      position: absolute;
-      left: 0%;
-      right: 0%;
-    }
-    & h1{
-      text-align: center;
-      font-family: 'GothamPro-Bold', sans-serif;
-      color: #4f504f;
-      font-size: 8vw;
-      font-weight: bolder;
-      opacity: 0.1;
-      text-transform: uppercase;
-      left: 0%;
-      right: 0%;
-    }
-    & h3{
-      text-align: center;
-      font-family: 'GothamPro-Bold', sans-serif;
-      color: #4f504f;
-      top: 6vh;
-      letter-spacing: 1vw;
-      font-size: 2vw;
-      position: absolute;
-      left: 0%;
-      right: 0%;
-      text-transform: uppercase;
+    & #about-team-title {
+      display: none;
     }
   }
   & .about-team-width {
@@ -630,21 +600,13 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
       /*padding: 30px 30px 30px 30px;*/
       /* text-decoration: none; */
       //border-left: 6px solid gray;
-      & h3{
-        color: #66FAF9;
-        font-family: 'GothamPro', sans-serif;
-        font-size: 31px;
-        font-weight: bold;
-        /*margin-top: 12%;*/
-      }
-      & p{
-        /*margin-top: -17%;
-        height: 160px;*/
-        font-family: 'GothamPro', sans-serif;
-        font-size: 17px;
-        opacity: 0.7;
-      }
-      & .about-team-img{
+      & .wtp{
+         color: #66FAF9;
+         font-family: 'GothamPro', sans-serif;
+         font-size: 31px;
+         font-weight: bold;
+         /*margin-top: 12%;*/
+        & .about-team-img{
         height: 40%;
         width: 40%;/**/
         -webkit-border-radius: 37px;
@@ -654,53 +616,35 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
         position: relative;
         display: inline-block;
       }
+       }
+      & p{
+        /*margin-top: -17%;
+        height: 160px;*/
+        font-family: 'GothamPro', sans-serif;
+        font-size: 17px;
+        opacity: 0.7;
+      }
+
+    }
+  }
+}
+
+.team-stuff{
+  & .our-team-title-two{
+    position: relative;
+    top: 20px;
+  }
+  & .about-team-width-bottom{
+    @include media-for(xs){
+      padding-right: 0;
+      padding-left: 0;
+      margin-left: 0;
+      margin-right: 0;
     }
   }
 }
 
 
-
-.our-team-title-two{
-    position: relative;
-    top: 20px;
-}
-.our-team-title-two h4{
-    text-align: center;
-    color: #4f504f;
-    top: 50%;
-    font-family: 'GothamPro', sans-serif;
-    font-size: 2vw;
-    position: absolute;
-    left: 50%;
-    right: 0%;
-    transform: translate(-50%, -137%);
-}
-.our-team-title-two h1{
-    text-align: center;
-    font-family: 'GothamPro-Bold', sans-serif;
-    color: #4f504f;
-    font-size: 8vw;
-    font-weight: bolder;
-    opacity: 0.1;
-    text-transform: uppercase;
-    left: 0%;
-    right: 0%;
-
-}
-
-.our-team-title-two h3{
-    text-align: center;
-    font-family: 'GothamPro-Bold', sans-serif;
-    color: #4f504f;
-    top: 53%;
-    letter-spacing: 1vw;
-    font-size: 2vw;
-    position: absolute;
-    left: 50%;
-    right: 0%;
-    text-transform: uppercase;
-    transform: translate(-50%, -45%);
-}
 .about-team-we-work {
     /*margin-top: 80%;*/
     height: 100%;
@@ -716,10 +660,7 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
     /*display: inline-block;*/
     padding-top: 4%;
 }
-/*.about-team-width-bottom {*/
-     /*padding-right: 0;*/
-     /*padding-left: 0; */
-/*}*/
+
 
 .about-team-we-work2 h4{
     color: #66FAF9;
@@ -742,11 +683,6 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
     padding-right: 8%;
 }
 
-/*.about-team-width-bottom,*/
-/*.img-responsive-size{*/
-    /*padding-left: 0;*/
-    /*padding-right: 0;*/
-/*}*/
 /**END TEAM**/
 /**PROMOTION**/
 
