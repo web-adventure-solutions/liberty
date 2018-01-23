@@ -592,39 +592,42 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
   & .our-team-title{
     position: relative;
     top: 20px;
-    & h4 {
-      text-align: center;
-      color: #4f504f;
-      top: 2vh;
-      font-family: 'GothamPro', sans-serif;
-      font-size: 2vw;
-      position: absolute;
-      left: 0%;
-      right: 0%;
+    & #about-team-title {
+      display: none;
     }
-    & h1{
-      text-align: center;
-      font-family: 'GothamPro-Bold', sans-serif;
-      color: #4f504f;
-      font-size: 8vw;
-      font-weight: bolder;
-      opacity: 0.1;
-      text-transform: uppercase;
-      left: 0%;
-      right: 0%;
-    }
-    & h3{
-      text-align: center;
-      font-family: 'GothamPro-Bold', sans-serif;
-      color: #4f504f;
-      top: 6vh;
-      letter-spacing: 1vw;
-      font-size: 2vw;
-      position: absolute;
-      left: 0%;
-      right: 0%;
-      text-transform: uppercase;
-    }
+    //& h4 {
+    //  text-align: center;
+    //  color: #4f504f;
+    //  top: 2vh;
+    //  font-family: 'GothamPro', sans-serif;
+    //  font-size: 2vw;
+    //  position: absolute;
+    //  left: 0%;
+    //  right: 0%;
+    //}
+    //& h1{
+    //  text-align: center;
+    //  font-family: 'GothamPro-Bold', sans-serif;
+    //  color: #4f504f;
+    //  font-size: 8vw;
+    //  font-weight: bolder;
+    //  opacity: 0.1;
+    //  text-transform: uppercase;
+    //  left: 0%;
+    //  right: 0%;
+    //}
+    //& h3{
+    //  text-align: center;
+    //  font-family: 'GothamPro-Bold', sans-serif;
+    //  color: #4f504f;
+    //  top: 6vh;
+    //  letter-spacing: 1vw;
+    //  font-size: 2vw;
+    //  position: absolute;
+    //  left: 0%;
+    //  right: 0%;
+    //  text-transform: uppercase;
+    //}
   }
   & .about-team-width {
     margin-top: 90px;
@@ -638,12 +641,12 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
       /* text-decoration: none; */
       //border-left: 6px solid gray;
       & h3{
-        color: #66FAF9;
-        font-family: 'GothamPro', sans-serif;
-        font-size: 31px;
-        font-weight: bold;
-        /*margin-top: 12%;*/
-      }
+         color: #66FAF9;
+         font-family: 'GothamPro', sans-serif;
+         font-size: 31px;
+         font-weight: bold;
+         /*margin-top: 12%;*/
+       }
       & p{
         /*margin-top: -17%;
         height: 160px;*/
@@ -664,8 +667,6 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
     }
   }
 }
-
-
 
 .our-team-title-two{
     position: relative;

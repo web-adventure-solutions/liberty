@@ -447,36 +447,8 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
 .our-team .our-team-title {
   position: relative;
   top: 20px; }
-  .our-team .our-team-title h4 {
-    text-align: center;
-    color: #4f504f;
-    top: 2vh;
-    font-family: 'GothamPro', sans-serif;
-    font-size: 2vw;
-    position: absolute;
-    left: 0%;
-    right: 0%; }
-  .our-team .our-team-title h1 {
-    text-align: center;
-    font-family: 'GothamPro-Bold', sans-serif;
-    color: #4f504f;
-    font-size: 8vw;
-    font-weight: bolder;
-    opacity: 0.1;
-    text-transform: uppercase;
-    left: 0%;
-    right: 0%; }
-  .our-team .our-team-title h3 {
-    text-align: center;
-    font-family: 'GothamPro-Bold', sans-serif;
-    color: #4f504f;
-    top: 6vh;
-    letter-spacing: 1vw;
-    font-size: 2vw;
-    position: absolute;
-    left: 0%;
-    right: 0%;
-    text-transform: uppercase; }
+  .our-team .our-team-title #about-team-title {
+    display: none; }
 .our-team .about-team-width {
   margin-top: 90px;
   text-align: center; }
