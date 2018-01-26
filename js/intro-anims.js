@@ -1,14 +1,18 @@
-// document.addEventListener('touchstart', function(e) {
-//     startX = e.changedTouches[0].pageX;
-// }, { passive: false });
-// document.addEventListener('touchmove', function(e) {
-//     if ( event.touches.length == 1 ) {
-//         curX = event.touches[0].pageX;
-//         if(Math.abs((curX-startX))>10){
-//             event.preventDefault();
-//         }
-//     }
-// }, { passive: false });
+function killScroll() {
+    document.addEventListener('touchstart', function(e) {
+        startX = e.changedTouches[0].pageX;
+        startY = e.changedTouches[0].pageY;
+    }, { passive: false });
+    document.addEventListener('touchmove', function(e) {
+        if ( event.touches.length == 1 ) {
+            curX = event.touches[0].pageX;
+            curY = event.touches[0].pageY;
+            if(Math.abs((curX-startX))>10 || Math.abs((curY-startY))>10){
+                event.preventDefault();
+            }
+        }
+    }, { passive: false });
+}
 $(document).ready(function () {
     $('img[usemap]').rwdImageMaps();
     container = $(window);
@@ -22,15 +26,39 @@ $(document).ready(function () {
     weddingTitle = $('.wedding-title');
     stroke = $('.stroke');
     strokeImg = $('#stroke-img');
+    // todo change to "index" on production
+    isIntroPage = window.location.href.indexOf("intro") !== -1;
+    isIntroPage ? killScroll() : null;
     effects_elem_arr = [
         [productionTitle, topFeatherArea, featherTop],
         [weddingTitle, bottomFeatherArea, featherBottom]
     ];
+
+    function featherAnim() {
+        stroke.animate({'height': '100vh'}, 1500, 'swing', function () {
+            if (container_w <= 1024) {
+                stroke.animate({'height': '50%'}, 1500);
+                // strokeImg.css({'height': '50%'});
+            } else {
+                stroke.animate({'height': strokeImg.height() + 'px'}, 1500);
+            }
+        });
+        featherTop.add(featherBottom).animate({
+            '-webkit-mask-position-x': '50%',
+            '-webkit-mask-position-y': '50%',
+            'mask-position-x': '50%',
+            'mask-position-y': '50%',
+            'opacity': '1'
+        }, 2000);
+    }
+
     effects_elem_arr.forEach(function (val) {
-        // val[0].delay(2000).queue(function () {
-        //     anim_effect = effects_elem_arr.indexOf(val) === 0 ? 'bounceInLeft' : 'bounceInRight';
-        //     $(this).addClass('opacity-1 animated ' + anim_effect + '').dequeue();
-        // });
+        if (isIntroPage) {
+            val[0].delay(2000).queue(function () {
+                anim_effect = effects_elem_arr.indexOf(val) === 0 ? 'bounceInLeft' : 'bounceInRight';
+                $(this).addClass('opacity-1 animated ' + anim_effect + '').dequeue();
+            });
+        }
         val[0].add(val[1])
             .mouseenter(function () {
                 $(val[0]).toggleClass('hover')
@@ -38,8 +66,7 @@ $(document).ready(function () {
             .mouseleave(function () {
                 $(val[0]).toggleClass('hover')
             });
-        // todo change to "index" on production
-        if (window.location.href.indexOf("intro") !== -1) {
+        if (isIntroPage) {
             val[1].mousemove(function (e) {
                 pos_x = e.pageX;
                 pos_y = e.pageY;
@@ -56,6 +83,8 @@ $(document).ready(function () {
             });
         }
     });
+    isIntroPage ? featherAnim() : null;
+
 
     var makeAnim = 0;
 
@@ -67,21 +96,7 @@ $(document).ready(function () {
                 var oTop = $('section.portfolio').offset().top - window.innerHeight;
                 var pTop = $(window).scrollTop();
                 if( pTop-container_h > oTop ){
-                    stroke.animate({'height': '100vh'}, 1500, 'swing', function () {
-                        if (container_w <= 1024) {
-                            stroke.animate({'height': '50%'}, 1500);
-                            strokeImg.css({'height': '50%'});
-                        } else {
-                            stroke.animate({'height': strokeImg.height() + 'px'}, 1500);
-                        }
-                    });
-                    featherTop.add(featherBottom).animate({
-                        '-webkit-mask-position-x': '50%',
-                        '-webkit-mask-position-y': '50%',
-                        'mask-position-x': '50%',
-                        'mask-position-y': '50%',
-                        'opacity': '1'
-                    }, 2000);
+                    featherAnim();
                     productionTitle.add(weddingTitle).removeClass('opacity-0');
                     productionTitle.addClass('animated bounceInLeft');
                     weddingTitle.addClass('animated bounceInRight');
