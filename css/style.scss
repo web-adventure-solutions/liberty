@@ -583,6 +583,9 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
   & .our-team-title{
     position: relative;
     top: 20px;
+    @include media-for-xs{
+
+    }
     & #about-team-title {
       display: none;
     }
@@ -605,17 +608,20 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
          font-family: 'GothamPro', sans-serif;
          font-size: 31px;
          font-weight: bold;
-         /*margin-top: 12%;*/
+
         & .about-team-img{
         height: 40%;
         width: 40%;/**/
         -webkit-border-radius: 37px;
         -moz-border-radius: 37px;
-        border: solid #66FAF9 10px;
+        border: solid #66FAF9 7px;
         border-radius: 200px;
         position: relative;
         display: inline-block;
-      }
+          @include media-for-xs{
+
+          }
+        }
        }
       & p{
         /*margin-top: -17%;
@@ -624,7 +630,6 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
         font-size: 17px;
         opacity: 0.7;
       }
-
     }
   }
 }
@@ -635,7 +640,7 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
     top: 20px;
   }
   & .about-team-width-bottom{
-    @include media-for(xs){
+    @include media-for-xs{
       padding-right: 0;
       padding-left: 0;
       margin-left: 0;
@@ -809,8 +814,38 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
     color: #66FAF9;
     text-decoration: none;
     border-color: transparent;
-
 }
+
+///////// ACCORDION /////////
+////////////////////////////
+#accordion input {
+  display: none;
+}
+#accordion label {
+  cursor: pointer;
+  display: block;
+  z-index: 20;
+}
+
+#accordion article {
+  background: #f7f7f7;
+  height:0px;
+  overflow:hidden;
+  z-index:10;
+}
+#accordion article p {
+  padding: 1em;
+}
+#accordion input:checked article {
+}
+#accordion input:checked ~ article {
+  border-bottom-left-radius: .25em;
+  border-bottom-right-radius: .25em;
+  height: auto;
+  margin-bottom: 2.125em;
+}
+//////////////////////////////
+/////////////////////////////
 /**END PROMOTION**/
 
 .form-area{
@@ -928,17 +963,16 @@ footer {
     padding-left: 9%;
 }
 
-.footer-copy {
-    padding: 0;
-    margin: 0;
-    /*text-align: center;*/
-    /*font-family: "GothamPro", sans-serif;*/
-    /*text-transform: uppercase;*/
-    /*text-decoration: none;*/
-    /*float: left;*/
-    /*display: inline-block;*/
-
-}
+//.footer-copy {
+//    padding: 0;
+//    margin: 0;
+//    /*text-align: center;*/
+//    /*font-family: "GothamPro", sans-serif;*/
+//    /*text-transform: uppercase;*/
+//    /*text-decoration: none;*/
+//    /*float: left;*/
+//    /*display: inline-block;*/
+//}
 .submit-send-email{
     -webkit-border-radius: 28%;
     -moz-border-radius: 28%;
@@ -959,7 +993,7 @@ footer {
 .wrap {
     width: 88%;
     /*margin: 0 auto;*/
-    position: absolute;
+    //position: absolute;
 
 }
 
@@ -1026,25 +1060,24 @@ footer {
 
 }
 .footer-copy li {
-    margin: 20px 10px;
-    padding: 0;
+    margin: 0 30px  0 30px;
+    //padding: 0;
     list-style-type: none;
     display: inline;
 }
 
 .footer-copy a{
-
     padding: 0px 15px;
     color: #fff;
-    font-size: 14px;
+    font-size: 1vw;
     letter-spacing: 1px;
     font-weight: 300;
-    /*display: inline-block;*/
+    display: inline-block;
 }
 
 .footer-logo{
-    display: inline;
-    width: 15%;
+    //display: inline;
+    width: 40%;
 }
 
 .social-connect{
