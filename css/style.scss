@@ -1,5 +1,12 @@
 @import "partials/variables";
 @import "partials/responsive-utilities";
+@import "liberty-icons.css";
+
+i {
+  @include media-for-lg {
+    font-size: 25px;
+  }
+}
 
 @mixin header-menu-links-style() {
   font-family: 'GothamPro', sans-serif;
@@ -250,35 +257,6 @@ li {
 li {
     position: relative;
 }
-
-li[class="social-default"] a {
-    position: absolute;
-    top: 0;
-}
-
-.social-default {
-  background: url("../assets/img/social-icons/social-icons-stack.svg") no-repeat;
-  background-size: 120px;
-  padding: 8px 15px;
-}
-
-.vimeo-icon {
-  background-position-x: 0;
-}
-
-.facebook-icon {
-  background-position-x: -30px;
-}
-
-.youtube-icon {
-  background-position-x: -60px;
-}
-
-.instagram-icon {
-  background-position-x: -90px;
-}
-
-
 
 /**end - social header*/
 
@@ -760,7 +738,7 @@ header .jumbotron h2 .parallelogram .parallelogram-inner-text {
     right: 0%;
     transform: translate(-50%, -137%);
 }
-.price-promotion h1{
+.price-promotion h1 {
     text-align: center;
     font-family: 'GothamPro-Bold', sans-serif;
     color: #4f504f;

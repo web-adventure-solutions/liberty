@@ -1,3 +1,4 @@
+@import url(liberty-icons.css);
 .visible-xs-h {
   display: none !important; }
 
@@ -16,6 +17,10 @@
 @media (min-width: 768px) {
   .hidden-xs-sm {
     display: none !important; } }
+
+@media (min-width: 1200px) {
+  i {
+    font-size: 25px; } }
 
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus,
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus,
@@ -199,27 +204,6 @@ li {
 
 li {
   position: relative; }
-
-li[class="social-default"] a {
-  position: absolute;
-  top: 0; }
-
-.social-default {
-  background: url("../assets/img/social-icons/social-icons-stack.svg") no-repeat;
-  background-size: 120px;
-  padding: 8px 15px; }
-
-.vimeo-icon {
-  background-position-x: 0; }
-
-.facebook-icon {
-  background-position-x: -30px; }
-
-.youtube-icon {
-  background-position-x: -60px; }
-
-.instagram-icon {
-  background-position-x: -90px; }
 
 /**end - social header*/
 /*jumbotron*/

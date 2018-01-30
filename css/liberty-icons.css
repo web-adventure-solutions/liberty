@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'liberty-icons';
+  src:  url('../assets/fonts/liberty-icons.eot?elylmb');
+  src:  url('../assets/fonts/liberty-icons.eot?elylmb#iefix') format('embedded-opentype'),
+    url('../assets/fonts/liberty-icons.ttf?elylmb') format('truetype'),
+    url('../assets/fonts/liberty-icons.woff?elylmb') format('woff'),
+    url('../assets/fonts/liberty-icons.svg?elylmb#liberty-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'liberty-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.liberty-icon-facebook:before {
+  content: "\e900";
+  color: #fff;
+}
+.liberty-icon-instagram:before {
+  content: "\e901";
+  color: #fff;
+}
+.liberty-icon-vimeo:before {
+  content: "\e902";
+  color: #fff;
+}
+.liberty-icon-youtube:before {
+  content: "\e903";
+  color: #fff;
+}
