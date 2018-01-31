@@ -82,6 +82,14 @@ header {
   -webkit-background-size: cover;
   background-size: cover; }
 
+#video-background {
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  opacity: 0.3; }
+
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
   background-color: transparent; }
 
