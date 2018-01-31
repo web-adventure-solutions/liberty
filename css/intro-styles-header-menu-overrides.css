@@ -1,0 +1,97 @@
+.visible-xs-h {
+  display: none !important; }
+
+@media (max-height: 459px) {
+  .visible-xs-h {
+    display: block !important; } }
+
+@media (max-height: 459px) {
+  .hidden-xs-h {
+    display: none !important; } }
+
+@media (max-width: 459px) {
+  .hidden-xs-v {
+    display: none !important; } }
+
+@media (min-width: 768px) {
+  .hidden-xs-sm {
+    display: none !important; } }
+
+/*header style overrides*/
+@media (min-width: 768px) {
+  .header-menu > li {
+    margin-right: 0;
+    height: 60px; } }
+
+@media (min-width: 768px) {
+  .navbar-default .navbar-nav > li > a {
+    padding-top: 20px; } }
+
+.navbar-default {
+  border-bottom-color: transparent; }
+
+.header-menu > li {
+  border-bottom: 1px solid #fff;
+  width: 80%; }
+
+.navbar-header {
+  float: none;
+  margin-top: 10px; }
+
+.navbar-toggle {
+  display: block; }
+  @media (max-width: 480px) {
+    .navbar-toggle {
+      margin-top: 8px !important; } }
+
+.navbar-collapse {
+  border-top: 1px solid transparent;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1); }
+
+.navbar-collapse.collapse {
+  display: none !important; }
+
+.navbar-collapse.collapse.in {
+  display: block !important; }
+
+.navbar-nav {
+  float: none !important;
+  margin: 7.5px -15px; }
+
+.navbar-nav > li {
+  float: none; }
+  @media (min-width: 768px) {
+    .navbar-nav > li {
+      margin-left: 27px; } }
+
+.navbar-nav > li > a {
+  padding-top: 10px;
+  padding-bottom: 10px; }
+
+.header-menu {
+  background-color: rgba(31, 68, 67, 0.9);
+  margin: 0 auto;
+  text-align: center; }
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #000; }
+
+.navbar-default .navbar-collapse {
+  position: absolute;
+  width: 300px;
+  right: 0;
+  border-color: transparent;
+  margin: 0 auto; }
+  @media (max-width: 767px) {
+    .navbar-default .navbar-collapse {
+      width: 80%; } }
+
+.navbar-brand {
+  font-family: "HelveticaNeueCyr Thin", sans-serif;
+  color: #66FAF9 !important;
+  font-size: 30px; }
+
+.header-menu > li:last-child {
+  border-bottom: none; }
+
+/*# sourceMappingURL=intro-styles-header-menu-overrides.css.map */
