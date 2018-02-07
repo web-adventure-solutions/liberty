@@ -37,22 +37,22 @@
 
 @font-face {
   font-family: 'Corinthia';
-  src: local("Corinthia"), url("../assets/fonts/corinthia.ttf") format("woff"), url("https://nomail.com.ua/files/woff/d9af980a0070a31725a941a825f01086.woff") format("woff"); }
+  src: local("Corinthia"), url("../assets/fonts/corinthia.ttf"), url("https://nomail.com.ua/files/woff/d9af980a0070a31725a941a825f01086.woff"); }
 @font-face {
   font-family: 'GothamPro-Black';
-  src: local("GothamPro-Black"), url("../assets/fonts/GothaProBla.otf"), url("https://nomail.com.ua/files/woff/0fe8b39328b4fa6490cc5916df0752e5.woff") format("woff"); }
+  src: local("GothamPro-Black"), url("../assets/fonts/GothaProBla.otf"), url("https://nomail.com.ua/files/woff/0fe8b39328b4fa6490cc5916df0752e5.woff"); }
 @font-face {
   font-family: 'GothamPro-Medium';
-  src: local("GothamPro-Medium"), url("../assets/fonts/GothaProMed.otf") format("otf"), url("https://nomail.com.ua/files/woff/dd3d9ca53a246950706e94726bb1403e.woff") format("woff"); }
+  src: local("GothamPro-Medium"), url("../assets/fonts/GothaProMed.otf"), url("https://nomail.com.ua/files/woff/dd3d9ca53a246950706e94726bb1403e.woff"); }
 @font-face {
   font-family: 'GothamPro';
-  src: local("GothamPro:300, 400, 500, 600, 700, 800, 900"), url("../assets/fonts/GothaProReg.otf") format("otf"), url("https://nomail.com.ua/files/woff/aafeb23794c0546aa78e6d11e49ef908.woff") format("woff"); }
+  src: local("GothamPro:300, 400, 500, 600, 700, 800, 900"), url("../assets/fonts/GothaProReg.otf"), url("https://nomail.com.ua/files/woff/aafeb23794c0546aa78e6d11e49ef908.woff"); }
 @font-face {
   font-family: 'GothamPro-Light';
-  src: local("GothamPro-Light"), url("../assets/fonts/GothaProLig.otf") format("otf"), url("https://nomail.com.ua/files/woff/aab7d221c447103e2454922cae29a3d7.woff") format("woff"); }
+  src: local("GothamPro-Light"), url("../assets/fonts/GothaProLig.otf"), url("https://nomail.com.ua/files/woff/aab7d221c447103e2454922cae29a3d7.woff"); }
 @font-face {
   font-family: 'GothamPro-Bold';
-  src: local("GothamPro-Bold"), url("../assets/fonts/GothaProBol.otf") format("otf"), url("https://nomail.com.ua/files/woff/3f9c5a2b33fd28799ac8e55c093a4531.woff") format("woff"); }
+  src: local("GothamPro-Bold"), url("../assets/fonts/GothaProBol.otf"), url("https://nomail.com.ua/files/woff/3f9c5a2b33fd28799ac8e55c093a4531.woff"); }
 /*animations*/
 .opacity-0 {
   opacity: 0; }
